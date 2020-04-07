@@ -46,17 +46,36 @@ nav {
 .home-main {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "name-box avatar-box"
     "description-box description-box";
 }
 
 .name-box {
-  background-color: burlywood;
   grid-area: name-box;
-  /* justify-self: center; */
+  justify-self: center;
+  align-self: center;
+}
+
+.name-box h1 {
+  /* background-color: darkkhaki; */
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 89px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.name-box span {
+  color: cornsilk;
+}
+
+.social-icons {
+  display: flex;
+  margin: -90px 10px 0px 60px;
+  /* background-color: darkgreen; */
 }
 
 .avatar-box {
