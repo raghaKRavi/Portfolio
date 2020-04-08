@@ -44,8 +44,8 @@ const Home = () => {
             <span>Ravi</span>
           </h1>
           <div className="social-icons">
-            <Icons name={"fa fa-github-square"} />
-            <Icons name={"fa fa-linkedin-square"} />
+            <Icons name={"fa fa-github-square github"} content="GITHUB" />
+            <Icons name={"fa fa-linkedin-square linkedin"} content="LINKEDIN" />
           </div>
         </div>
         <div className="avatar-box">

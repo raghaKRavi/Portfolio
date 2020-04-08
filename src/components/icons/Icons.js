@@ -6,6 +6,9 @@ const Icons = (props) => {
     <>
       <div className="icons">
         <i className={props.name}></i>
+        <div class="dropdown-content">
+          <p>{props.content}</p>
+        </div>
       </div>
     </>
   );
