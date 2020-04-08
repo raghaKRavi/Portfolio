@@ -2,6 +2,7 @@ import React from "react";
 
 import "./HomeStyle.css";
 import logo from "./KRRLogo.svg";
+import Icons from "../icons/Icons";
 
 const Home = () => {
   return (
@@ -39,8 +40,13 @@ const Home = () => {
       <main className="home-main">
         <div className="name-box">
           <h1>
-            Raghavendar <span>Ravi</span>
+            Raghavendar <br></br>
+            <span>Ravi</span>
           </h1>
+          <div className="social-icons">
+            <Icons name={"fa fa-github-square github"} content="GITHUB" />
+            <Icons name={"fa fa-linkedin-square linkedin"} content="LINKEDIN" />
+          </div>
         </div>
         <div className="avatar-box">
           <h1>Avatar</h1>
