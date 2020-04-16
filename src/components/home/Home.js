@@ -2,7 +2,10 @@ import React from "react";
 
 import "./HomeStyle.css";
 import logo from "./KRRLogo.svg";
-import Icons from "../icons/Icons";
+import TypeWriter from "../typewrite/Typewrite";
+import TypewriteAnimation from "../../typewriteAnimation/TypewriteAnimation";
+
+let msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
 const Home = () => {
   return (
@@ -37,24 +40,16 @@ const Home = () => {
         </nav>
       </header>
 
-      <main className="home-main">
-        <div className="name-box">
-          <h1>
-            Raghavendar <br></br>
-            <span>Ravi</span>
-          </h1>
-          <div className="social-icons">
-            <Icons name={"fa fa-github-square github"} content="GITHUB" />
-            <Icons name={"fa fa-linkedin-square linkedin"} content="LINKEDIN" />
-          </div>
+      <section className="home-section">
+        <div className="left-box">
+          <h1>Raghavendar</h1>
         </div>
-        <div className="avatar-box">
-          <h1>Avatar</h1>
+        <div className="right-box">
+          <h1>Ravi</h1>
+          <TypeWriter messages={msgs} />
+          <TypewriteAnimation />
         </div>
-        <div className="description-box">
-          <h1>Description About ME</h1>
-        </div>
-      </main>
+      </section>
       <section>
         <h2>hello </h2>
       </section>

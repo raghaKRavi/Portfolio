@@ -1,0 +1,16 @@
+.typewriter-text {
+  margin-left: 50px;
+  font-weight: bold;
+  color: #433a3a;
+}
+
+#cursor {
+  border-left: 0.1em solid #433a3a;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
