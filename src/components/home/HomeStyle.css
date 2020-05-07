@@ -10,9 +10,6 @@
   font-family: Rockwell;
 }
 
-.body {
-}
-
 header {
   display: flex;
   background-color: #c4c4c400;
@@ -91,8 +88,8 @@ nav {
   background-color: #433a3a;
   height: 250vh;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr;
-  grid-template-rows: 0.1fr 1.5fr 1.2fr 1fr;
+  grid-template-columns: 0.18fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1.2fr 1fr;
   grid-template-areas:
     "sidenav heading heading"
     "sidenav project-01 project-02"
@@ -137,129 +134,23 @@ nav {
 
 .project-01 {
   grid-area: project-01;
-  margin-left: 140px;
-  margin-top: 90px;
+  margin-top: 60px;
 }
 
 .project-02 {
   grid-area: project-02;
-  margin-top: 90px;
-  margin-left: 80px;
+  margin-top: 60px;
 }
 
 .project-03 {
   grid-area: project-03;
-  margin-left: 140px;
-  /* margin-top: 120px; */
 }
 
 .project-04 {
   grid-area: project-04;
-  /* margin-top: 120px; */
-  margin-left: 80px;
 }
-
-/* .project-section {
-  background-color: #433a3a;
-  height: 200vh;
-}
-
-.project-section .project-sidenav {
-  background-color: #433a3a;
-  width: 7%;
-  position: sticky;
-  height: 50%;
-  align-content: center;
-  justify-content: center;
-  top: 0px;
-}
-
-.project-sidenav .vertical-text {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  text-align: center;
-  padding-top: 30vh;
-  padding-left: 30px;
-  color: #f8bf3c;
-  font-size: 25px;
-}
-
-.projects-area {
-  margin: -40% 0% 0% 7%;
-  padding-left: 15%;
-  justify-content: space-around;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "project-1 project-2"
-    "project-3 project4";
-}
-
-.project-1 {
-  grid-area: project-1;
-}
-
-.project-2 {
-  grid-area: project-2;
-}
-.project-3 {
-  grid-area: project-3;
-}
-.project-4 {
-  grid-area: project-4;
-} */
 
 .skills-section {
   height: 100vh;
   background-color: darkblue;
 }
-
-/* .project-section {
-  background-color: #2e2828;
-  height: 200vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(410px, 1fr));
-  grid-template-areas:
-    "project-1 project-2 project-3"
-    "project-4 . .";
-  grid-row-gap: 100px;
-  padding-top: 100px;
-  padding-left: 50px;
-} */
-
-/* .project1-box {
-  grid-area: project-1;
-  margin: 50px;
-  margin-top: 100px;
-}
-.project2-box {
-  grid-area: project-2;
-  margin: 50px;
-  margin-top: 150px;
-}
-.project3-box {
-  grid-area: project-3;
-  margin: 50px;
-  margin-top: 150px;
-}
-.project4-box {
-  grid-area: project-4;
-  margin: 50px;
-} */
-
-/* .project-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-template-rows: repeat(2, 410px);
-  height: 200vh;
-  grid-column-gap: 60px;
-  grid-row-gap: 50px;
-  background-color: rgb(207, 130, 29);
-}
-
-.project1-box {
-  grid-area: project-1;
-  margin-top: 150px;
-} */

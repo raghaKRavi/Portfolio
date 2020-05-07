@@ -14,7 +14,7 @@ const Projects = () => {
         <div className="details">
           <h2>Object Search Application with Transfer Learning</h2>
 
-          <div class="info">
+          <div className="info">
             <p>Project Description</p>
             <h5>
               The number of lines in a paragraph depends on the size of the
@@ -24,7 +24,7 @@ const Projects = () => {
           </div>
 
           <div className="link">
-            <i class="fa fa-code"></i>
+            <i className="fa fa-code"></i>
           </div>
         </div>
       </div>
