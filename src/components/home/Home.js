@@ -35,7 +35,7 @@ const Home = () => {
             </li>
             <li>
               <a className="nav-link" href="#">
-                Extra
+                Contact
               </a>
             </li>
           </ul>
