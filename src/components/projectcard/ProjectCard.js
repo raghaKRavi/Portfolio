@@ -20,11 +20,11 @@ const ProjectCard = (props) => {
             </p>
             <div className="stats">
               <div id="github-icon">
-                <i class="fa fa-github-square"></i>
+                <i className="fa fa-github-square"></i>
                 <div className="icon-title">Github</div>
               </div>
               <div id="demo-icon">
-                <i class="fa fa-desktop"></i>
+                <i className="fa fa-desktop"></i>
                 <div className="icon-title">Live Demo</div>
               </div>
             </div>

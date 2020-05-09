@@ -3,7 +3,6 @@ import React from "react";
 import "./HomeStyle.css";
 import logo from "./KRRLogo.svg";
 import TypeWriter from "../typewrite/Typewrite";
-import TypewriteAnimation from "../../typewriteAnimation/TypewriteAnimation";
 // import Projects from "../projects/Projects";
 import Skills from "../skills/Skills";
 import ProjectCard from "../projectcard/ProjectCard";
@@ -50,7 +49,6 @@ const Home = () => {
         <div className="right-box">
           <h1>Ravi</h1>
           <TypeWriter messages={msgs} />
-          <TypewriteAnimation />
         </div>
       </section>
 
