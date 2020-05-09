@@ -1,0 +1,354 @@
+.skills-tree {
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+  letter-spacing: 2rem;
+}
+button:focus {
+  outline: none;
+}
+
+.skills-tree li {
+  text-align: center;
+  list-style: none;
+}
+
+.filter-ul {
+  padding-top: 40px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* check for hover and display */
+#isFilter-branch {
+  display: none;
+}
+
+#isFilter-buttons {
+  display: none;
+}
+
+#isFilter-true-branch {
+  display: block;
+}
+
+#isFilter-true-buttons {
+  display: flex;
+}
+
+.skills-button {
+  width: 173px;
+  height: 66px;
+  border: 2px solid #f8bf3c;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  letter-spacing: 0.1rem;
+}
+
+#isSkills-deactive {
+  background: none;
+  color: #f8bf3c;
+}
+
+#isSkills-active {
+  background-color: #f8bf3c;
+  color: #433a3a;
+  cursor: pointer;
+}
+
+#isSkills-deactive:hover {
+  background-color: #f8bf3c;
+  color: #433a3a;
+  cursor: pointer;
+}
+
+.filter-button {
+  letter-spacing: 0.1rem;
+  width: 202px;
+  height: 50px;
+  border: 2px solid #f8bf3c;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 3px;
+}
+
+/* branches */
+
+.middle-branch {
+  border-left: 4px solid #f8bf3c;
+  height: 1.5rem;
+  position: absolute;
+  left: 50%;
+  -webkit-animation: middle-branch-animation 0.4s ease-in infnite both;
+  animation: middle-branch-animation 0.4s ease-in both;
+}
+.middle-branch2 {
+  border-left: 4px solid #f8bf3c;
+  height: 1.2rem;
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  -webkit-animation: connect-branch-animation 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
+}
+
+.left-first-branch {
+  border-top: 4px solid #f8bf3c;
+  position: absolute;
+  width: 210px;
+  top: 56%;
+  right: 50%;
+  -webkit-animation: left-branch-animation 0.6s ease 0.8s both;
+  animation: left-branch-animation 0.6s ease 0.8s both;
+}
+
+.left-zero-branch {
+  border-top: 4px solid #f8bf3c;
+  position: absolute;
+  width: 410px;
+  top: 56%;
+  right: 50%;
+  -webkit-animation: left-branch-animation 0.6s ease 0.8s both;
+  animation: left-branch-animation 0.6s ease 0.8s both;
+}
+
+.right-zero-branch {
+  border-top: 4px solid #f8bf3c;
+  position: absolute;
+  width: 410px;
+  top: 56%;
+  left: 50%;
+  -webkit-animation: right-branch-animation 0.7s ease 0.8s both;
+  animation: right-branch-animation 0.7s ease 0.8s both;
+}
+
+.right-first-branch {
+  border-top: 4px solid #f8bf3c;
+  position: absolute;
+  width: 210px;
+  top: 56%;
+  left: 50%;
+  -webkit-animation: right-branch-animation 0.7s ease 0.8s both;
+  animation: right-branch-animation 0.7s ease 0.8s both;
+}
+
+/* connecting branch */
+
+.zero-connect-branch {
+  border-left: 4px solid #f8bf3c;
+  position: absolute;
+  height: 1.2rem;
+  top: 56%;
+  left: 19.5%;
+  -webkit-animation: connect-branch-animation 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
+}
+
+.first-connect-branch {
+  border-left: 4px solid #f8bf3c;
+  position: absolute;
+  height: 1.2rem;
+  top: 56%;
+  left: 34.5%;
+  -webkit-animation: connect-branch-animation 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
+}
+
+.firstRight-connect-branch {
+  border-left: 4px solid #f8bf3c;
+  position: absolute;
+  height: 1.2rem;
+  top: 56%;
+  left: 65.5%;
+  -webkit-animation: connect-branch-animation 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
+}
+
+.zeroRight-connect-branch {
+  border-left: 4px solid #f8bf3c;
+  position: absolute;
+  height: 1.2rem;
+  top: 56%;
+  left: 80.2%;
+  -webkit-animation: connect-branch-animation 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
+}
+
+/* button animation settings */
+#framework-button {
+  color: #f8bf3c;
+  background: none;
+  -webkit-animation: framework-button-animation 0.4s ease-out 0.7s both;
+  animation: framework-button-animation 0.4s ease-out 0.7s both;
+}
+
+#backend-button {
+  position: relative;
+  color: #f8bf3c;
+  background: none;
+  -webkit-animation: left-branch-button-animation 0.7s ease 0.8s both;
+  animation: left-branch-button-animation 0.7s ease 0.8s both;
+}
+
+#frontend-button {
+  color: #f8bf3c;
+  background: none;
+  position: relative;
+  -webkit-animation: left-branch-button-animation 0.7s ease 1s both;
+  animation: left-branch-button-animation 0.7s ease 1s both;
+}
+
+#data-button {
+  position: relative;
+  color: #f8bf3c;
+  background: none;
+  -webkit-animation: right-branch-button-animation 0.7s ease 0.8s both;
+  animation: right-branch-button-animation 0.7s ease 0.8s both;
+}
+
+#others-button {
+  position: relative;
+  color: #f8bf3c;
+  background: none;
+  -webkit-animation: right-branch-button-animation 0.7s ease 1s both;
+  animation: right-branch-button-animation 0.7s ease 1s both;
+}
+
+/* button hover effects */
+
+#frontend-button:hover {
+  background-color: #f8bf3c;
+  color: #433a3a;
+  cursor: pointer;
+}
+
+#backend-button:hover {
+  background-color: #f8bf3c;
+  color: #433a3a;
+  cursor: pointer;
+}
+
+#backend-button:hover ~ #frontend-button {
+  color: aliceblue;
+}
+
+/* Animations */
+
+@keyframes middle-branch-animation {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes left-branch-animation {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes right-branch-animation {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes connect-branch-animation {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+/*  button animations */
+
+@keyframes framework-button-animation {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left-branch-button-animation {
+  0% {
+    left: 50%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes right-branch-button-animation {
+  0% {
+    left: -50%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
