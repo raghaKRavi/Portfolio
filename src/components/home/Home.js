@@ -46,10 +46,37 @@ const Home = () => {
       <section className="home-section">
         <div className="left-box">
           <h1>Raghavendar</h1>
+          <div className="link-left">
+            <a
+              class="social-link"
+              href="https://github.com/Ragav25"
+              target="_blank"
+            >
+              <i class="fa fa-github-square" id="github-icon" title="GITHUB">
+                <p>GITHUB</p>
+              </i>
+            </a>
+          </div>
         </div>
+
         <div className="right-box">
           <h1>Ravi</h1>
           <TypeWriter messages={msgs} />
+          <div className="link-right">
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/raghavendar-ravi-48ab75137/"
+              target="_blank"
+            >
+              <i
+                class="fa fa-linkedin-square"
+                id="linkedin-icon"
+                title="LinkedIn"
+              >
+                <p>LINKEDIN</p>
+              </i>
+            </a>
+          </div>
         </div>
       </section>
 
