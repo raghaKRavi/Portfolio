@@ -33,6 +33,7 @@ const Skills = () => {
             >
               SKILLS
             </button>
+            <div className="middle-connection"></div>
             <div
               className="branches"
               id={isShowFilter ? "isFilter-true-branch" : "isFilter-branch"}
@@ -50,14 +51,7 @@ const Skills = () => {
                     : "branch-notSelected"
                 }
               ></div>
-              <div
-                className="middle-branch2"
-                id={
-                  hoverFilterButton.framework
-                    ? "branch-selected"
-                    : "branch-notSelected"
-                }
-              ></div>
+
               {/* <!--    left branches      --> */}
               {/* frontend button */}
               <div
@@ -68,24 +62,9 @@ const Skills = () => {
                     : "branch-notSelected"
                 }
               ></div>
-              <div
-                className="zero-connect-branch"
-                id={
-                  hoverFilterButton.frontend
-                    ? "branch-selected"
-                    : "branch-notSelected"
-                }
-              ></div>
 
               {/* backend button */}
-              <div
-                className="first-connect-branch"
-                id={
-                  hoverFilterButton.backend
-                    ? "branch-selected"
-                    : "branch-notSelected"
-                }
-              ></div>
+
               <div
                 className="left-first-branch"
                 id={
@@ -105,23 +84,9 @@ const Skills = () => {
                     : "branch-notSelected"
                 }
               ></div>
-              <div
-                className="zeroRight-connect-branch"
-                id={
-                  hoverFilterButton.others
-                    ? "branch-selected"
-                    : "branch-notSelected"
-                }
-              ></div>
+
               {/* data button*/}
-              <div
-                className="firstRight-connect-branch"
-                id={
-                  hoverFilterButton.data
-                    ? "branch-selected"
-                    : "branch-notSelected"
-                }
-              ></div>
+
               <div
                 className="right-first-branch"
                 id={
@@ -138,6 +103,14 @@ const Skills = () => {
               id={isShowFilter ? "isFilter-true-buttons" : "isFilter-buttons"}
             >
               <li>
+                <div
+                  className="frontend-connecting"
+                  id={
+                    hoverFilterButton.frontend
+                      ? "connecting-selected"
+                      : "connecting-notSelected"
+                  }
+                ></div>
                 <button
                   className=" filter-button"
                   id="frontend-button"
@@ -158,6 +131,14 @@ const Skills = () => {
                 </button>
               </li>
               <li>
+                <div
+                  className="backend-connecting"
+                  id={
+                    hoverFilterButton.backend
+                      ? "connecting-selected"
+                      : "connecting-notSelected"
+                  }
+                ></div>
                 <button
                   className="filter-button"
                   id="backend-button"
@@ -178,6 +159,14 @@ const Skills = () => {
                 </button>
               </li>
               <li>
+                <div
+                  className="framework-connecting"
+                  id={
+                    hoverFilterButton.framework
+                      ? "connecting-selected"
+                      : "connecting-notSelected"
+                  }
+                ></div>
                 <button
                   className="filter-button"
                   id="framework-button"
@@ -198,6 +187,14 @@ const Skills = () => {
                 </button>
               </li>
               <li>
+                <div
+                  className="data-connecting"
+                  id={
+                    hoverFilterButton.data
+                      ? "connecting-selected"
+                      : "connecting-notSelected"
+                  }
+                ></div>
                 <button
                   className="filter-button"
                   id="data-button"
@@ -218,6 +215,14 @@ const Skills = () => {
                 </button>
               </li>
               <li>
+                <div
+                  className="others-connecting"
+                  id={
+                    hoverFilterButton.others
+                      ? "connecting-selected"
+                      : "connecting-notSelected"
+                  }
+                ></div>
                 <button
                   className="filter-button"
                   id="others-button"

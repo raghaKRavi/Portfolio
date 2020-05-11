@@ -6,6 +6,7 @@ import TypeWriter from "../typewrite/Typewrite";
 // import Projects from "../projects/Projects";
 import Skills from "../skills/Skills";
 import ProjectCard from "../projectcard/ProjectCard";
+import IconSkills from "../IconSkills/IconSkills";
 
 const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
@@ -97,6 +98,7 @@ const Home = () => {
 
       <section className="skills-section">
         <Skills />
+        <IconSkills />
       </section>
     </div>
   );

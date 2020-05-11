@@ -1,7 +1,7 @@
 .skills-tree {
   position: relative;
   margin: 0 auto;
-  top: 100px;
+  top: 50px;
   letter-spacing: 2rem;
 }
 button:focus {
@@ -14,7 +14,7 @@ button:focus {
 }
 
 .filter-ul {
-  padding-top: 40px;
+  padding-top: 25px;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -38,9 +38,9 @@ button:focus {
 }
 
 .skills-button {
-  width: 173px;
+  width: 202px;
   height: 66px;
-  border: 2px solid #f8bf3c;
+  border: 3px solid #f8bf3c;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
@@ -57,6 +57,7 @@ button:focus {
   background-color: #f8bf3c;
   color: #433a3a;
   cursor: pointer;
+  border-color: #ffffff;
 }
 
 #isSkills-deactive:hover {
@@ -69,7 +70,7 @@ button:focus {
   letter-spacing: 0.1rem;
   width: 202px;
   height: 50px;
-  border: 2px solid #f8bf3c;
+  border: 3px solid #f8bf3c;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
@@ -79,31 +80,28 @@ button:focus {
 
 /* branches */
 
+/* .middle-connection {
+  height: 1.8rem;
+  width: 4px;
+  position: relative;
+  background-color: #f8bf3c;
+  text-align: center;
+  margin: 0px auto;
+} */
+
 .middle-branch {
-  border-left: 4px solid #f8bf3c;
-  height: 1.6rem;
+  border-left: 4px solid #ffffff;
+  height: 1.8rem;
   position: absolute;
-  left: 50%;
+  left: 49.9%;
   -webkit-animation: middle-branch-animation 0.4s ease-in infnite both;
   animation: middle-branch-animation 0.4s ease-in both;
-  z-index: 1;
+  z-index: 9;
 }
-.middle-branch2 {
-  border-left: 4px solid #f8bf3c;
-  height: 1.2rem;
-  position: absolute;
-  left: 50%;
-  top: 56%;
-  -webkit-animation: connect-branch-animation 0.5s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
-  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    1.5s both;
-}
-
 .left-first-branch {
   border-top: 4px solid #f8bf3c;
   position: absolute;
-  width: 210px;
+  width: 207px;
   top: 56%;
   right: 50%;
   -webkit-animation: left-branch-animation 0.6s ease 0.8s both;
@@ -134,58 +132,70 @@ button:focus {
 .right-first-branch {
   border-top: 4px solid #f8bf3c;
   position: absolute;
-  width: 210px;
+  width: 207px;
   top: 56%;
   left: 50%;
   -webkit-animation: right-branch-animation 0.7s ease 0.8s both;
   animation: right-branch-animation 0.7s ease 0.8s both;
+  z-index: 1;
 }
 
 /* connecting branch */
 
-.zero-connect-branch {
-  border-left: 4px solid #f8bf3c;
-  position: absolute;
-  height: 1.2rem;
-  top: 56%;
-  left: 19.5%;
+.frontend-connecting {
+  height: 20px;
+  width: 4px;
+  position: relative;
+  background-color: #f8bf3c;
+  margin: 0px auto;
   -webkit-animation: connect-branch-animation 0.5s
     cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
   animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     1.5s both;
 }
 
-.first-connect-branch {
-  border-left: 4px solid;
-  position: absolute;
-  height: 1.2rem;
-  top: 56%;
-  left: 34.5%;
-  -webkit-animation: connect-branch-animation 0.5s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
-  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    1.5s both;
-  z-index: 1;
-}
-
-.firstRight-connect-branch {
-  border-left: 4px solid #f8bf3c;
-  position: absolute;
-  height: 1.2rem;
-  top: 56%;
-  left: 65.3%;
+.backend-connecting {
+  height: 20px;
+  position: relative;
+  width: 4px;
+  background-color: #f8bf3c;
+  margin: 0px auto;
   -webkit-animation: connect-branch-animation 0.5s
     cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
   animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     1.5s both;
 }
 
-.zeroRight-connect-branch {
-  border-left: 4px solid #f8bf3c;
-  position: absolute;
-  height: 1.2rem;
-  top: 56%;
-  left: 80.2%;
+.framework-connecting {
+  position: relative;
+  height: 21px;
+  width: 4px;
+  background-color: #f8bf3c;
+  margin: 0px auto;
+  -webkit-animation: connect-branch-animation 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
+}
+
+.data-connecting {
+  position: relative;
+  height: 20px;
+  width: 4px;
+  background-color: #f8bf3c;
+  margin: 0px auto;
+  -webkit-animation: connect-branch-animation 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+  animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.5s both;
+}
+
+.others-connecting {
+  position: relative;
+  height: 20px;
+  width: 4px;
+  background-color: #f8bf3c;
+  margin: 0px auto;
   -webkit-animation: connect-branch-animation 0.5s
     cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
   animation: connect-branch-animation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
@@ -199,7 +209,14 @@ button:focus {
 }
 
 #branch-selected {
-  border-color: #d7d7d7;
+  border-color: #ffffff;
+}
+
+#connecting-selected {
+  background-color: #ffffff;
+}
+#connecting-notSelected {
+  background-color: #f8bf3c;
 }
 
 /* button animation settings */
@@ -248,35 +265,35 @@ button:focus {
   background-color: #f8bf3c;
   color: #433a3a;
   cursor: pointer;
-  border-color: #d7d7d7;
+  border-color: #ffffff;
 }
 
 #backend-button:hover {
   background-color: #f8bf3c;
   color: #433a3a;
   cursor: pointer;
-  border-color: #d7d7d7;
+  border-color: #ffffff;
 }
 
 #framework-button:hover {
   background-color: #f8bf3c;
   color: #433a3a;
   cursor: pointer;
-  border-color: #d7d7d7;
+  border-color: #ffffff;
 }
 
 #data-button:hover {
   background-color: #f8bf3c;
   color: #433a3a;
   cursor: pointer;
-  border-color: #d7d7d7;
+  border-color: #ffffff;
 }
 
 #others-button:hover {
   background-color: #f8bf3c;
   color: #433a3a;
   cursor: pointer;
-  border-color: #d7d7d7;
+  border-color: #ffffff;
 }
 
 /* Animations */
