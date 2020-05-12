@@ -4,6 +4,7 @@ import "./HomeStyle.css";
 import logo from "./KRRLogo.svg";
 import TypeWriter from "../typewrite/Typewrite";
 // import Projects from "../projects/Projects";
+import about from "./about-black.png";
 import Skills from "../skills/Skills";
 import ProjectCard from "../projectcard/ProjectCard";
 import IconSkills from "../IconSkills/IconSkills";
@@ -22,8 +23,6 @@ const Home = () => {
       }
     };
   }, []);
-
-  console.log(scrolling);
 
   return (
     <div className="body">
@@ -95,6 +94,26 @@ const Home = () => {
               </i>
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="about-section" id="about">
+        <div className="about-img">
+          <img src={about} />
+        </div>
+
+        <div className="about-subsection">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
         </div>
       </section>
 
