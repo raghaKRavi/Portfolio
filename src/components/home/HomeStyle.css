@@ -11,6 +11,11 @@
   scroll-behavior: smooth;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 header {
   display: flex;
   width: 100%;
@@ -58,7 +63,7 @@ nav {
 }
 
 .home-section {
-  height: 100vh;
+  height: 100.9vh;
   margin-top: -70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -215,6 +220,35 @@ nav {
 .link-right:hover:after {
   opacity: 0.5;
   transform: translateY(100%);
+}
+
+.about-section {
+  height: 100vh;
+  background-color: #f8bf3c;
+}
+
+.about-img {
+  text-align: center;
+}
+
+.about-img img {
+  width: 300px;
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+.about-subsection {
+  background-color: #433a3a;
+  height: 100%;
+  margin-top: -17px;
+  padding: 30px;
+}
+
+.about-section p {
+  text-align: left;
+  color: #f8bf3c;
+  font-size: 18px;
+  align-self: right;
 }
 
 .project-section {
