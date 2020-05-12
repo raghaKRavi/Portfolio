@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./HomeStyle.css";
 import logo from "./KRRLogo.svg";
@@ -11,32 +11,46 @@ import IconSkills from "../IconSkills/IconSkills";
 const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
 const Home = () => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      if (window.pageYOffset > 600) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+  }, []);
+
+  console.log(scrolling);
+
   return (
     <div className="body">
-      <header>
+      <header id={scrolling ? "scrolling" : "not-scrolling"}>
         <div className="logo-container">
           <img src={logo} alt="logo" id="#logo" />
         </div>
-        <nav>
+        <nav id="">
           <ul className="nav-links">
             <li>
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#about">
+                ABOUT
+              </a>
+            </li>
+            <li>
+              <a className="nav-link" href="#projects">
                 Projects
               </a>
             </li>
             <li>
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#skills">
                 Skills
               </a>
             </li>
             <li>
               <a className="nav-link" href="#">
-                Education
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#">
-                Contact
+                Say Hello!!
               </a>
             </li>
           </ul>
@@ -48,12 +62,16 @@ const Home = () => {
           <h1>Raghavendar</h1>
           <div className="link-left">
             <a
-              class="social-link"
+              className="social-link"
               href="https://github.com/Ragav25"
               target="_blank"
             >
-              <i class="fa fa-github-square" id="github-icon" title="GITHUB">
-                <p>GITHUB</p>
+              <i
+                className="fa fa-github-square"
+                id="github-icon"
+                title="GITHUB"
+              >
+                {/* <p>GITHUB</p> */}
               </i>
             </a>
           </div>
@@ -64,23 +82,23 @@ const Home = () => {
           <TypeWriter messages={msgs} />
           <div className="link-right">
             <a
-              class="social-link"
+              className="social-link"
               href="https://www.linkedin.com/in/raghavendar-ravi-48ab75137/"
               target="_blank"
             >
               <i
-                class="fa fa-linkedin-square"
+                className="fa fa-linkedin-square"
                 id="linkedin-icon"
                 title="LinkedIn"
               >
-                <p>LINKEDIN</p>
+                {/* <p>LINKEDIN</p> */}
               </i>
             </a>
           </div>
         </div>
       </section>
 
-      <section className="project-section">
+      <section className="project-section" id="projects">
         <div className="sidenav-project">
           <p className="vertical-text">Projects</p>
         </div>
@@ -123,7 +141,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="skills-section">
+      <section className="skills-section" id="skills">
         <Skills />
         <IconSkills />
       </section>

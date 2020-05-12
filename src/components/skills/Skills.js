@@ -12,12 +12,6 @@ const Skills = () => {
     others: false,
   });
 
-  {
-    hoverFilterButton.backend
-      ? console.log("true bvalue")
-      : console.log("false value");
-  }
-
   const toggleHandler = () => setIsShowFilter((value) => !value);
 
   return (
