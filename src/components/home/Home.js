@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./HomeStyle.css";
+
 import logo from "./KRRLogo.svg";
 import TypeWriter from "../typewrite/Typewrite";
 // import Projects from "../projects/Projects";
@@ -8,6 +9,7 @@ import about from "./about-black.png";
 import Skills from "../skills/Skills";
 import ProjectCard from "../projectcard/ProjectCard";
 import IconSkills from "../IconSkills/IconSkills";
+import Contact from "../contact/Contact";
 
 const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
@@ -48,7 +50,7 @@ const Home = () => {
               </a>
             </li>
             <li>
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#contact">
                 Say Hello!!
               </a>
             </li>
@@ -117,6 +119,8 @@ const Home = () => {
         </div>
       </section>
 
+      <hr></hr>
+
       <section className="project-section" id="projects">
         <div className="sidenav-project">
           <p className="vertical-text">Projects</p>
@@ -160,9 +164,16 @@ const Home = () => {
         </div>
       </section>
 
+      <hr></hr>
+
       <section className="skills-section" id="skills">
         <Skills />
         <IconSkills />
+      </section>
+
+      <hr></hr>
+      <section className="contact-section" id="contact">
+        <Contact />
       </section>
     </div>
   );

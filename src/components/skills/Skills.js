@@ -16,7 +16,7 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <hr></hr>
+      {/* <hr></hr> */}
       <div className="skills-tree">
         <ul>
           <li>
