@@ -11,6 +11,11 @@
   scroll-behavior: smooth;
 }
 
+a:focus {
+  border: none;
+  outline: none;
+}
+
 button {
   border: none;
   outline: none;
@@ -30,7 +35,7 @@ header {
 
 #scrolling {
   background-color: #f8bf3c;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 #not-scrolling {
   background-color: transparent;
@@ -58,7 +63,7 @@ nav {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  margin: 0px 40px 0px 10px;
+  margin: 15px 20px 0px 10px;
   letter-spacing: 10.5%;
 }
 
@@ -187,7 +192,7 @@ nav {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   overflow: hidden;
   float: left;
-  top: 5%;
+  top: 1.9%;
   text-align: center;
   cursor: pointer;
 }
@@ -272,6 +277,7 @@ nav {
 }
 
 .project-heading h1 {
+  opacity: 25%;
   font-size: 106px;
   text-transform: uppercase;
   color: #f8bf3c;
@@ -319,6 +325,16 @@ nav {
 .skills-section {
   height: 100vh;
   background-color: #433a3a;
+}
+
+.contact-section {
+  height: 100vh;
+  background-color: #433a3a;
+}
+
+hr {
+  background-color: #f8bf3c;
+  margin: 0;
 }
 
 /* Animations */

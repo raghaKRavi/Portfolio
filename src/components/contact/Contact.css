@@ -1,0 +1,119 @@
+.contact-body {
+  overflow-x: hidden;
+}
+.contact-heading h3 {
+  position: relative;
+  color: #f8bf3c;
+  text-align: center;
+  padding: 80px 0 0 0;
+  font-size: 35px;
+  z-index: 1;
+}
+
+.back-line {
+  width: 100%;
+  height: 10px;
+  background-color: #ffffff;
+  margin-top: -26px;
+  -webkit-animation: scale-up-hor-left 2.5s ease-in both;
+  animation: scale-up-hor-left 2.5s ease-in both;
+}
+
+.contact-grid {
+  display: grid;
+  background-color: #433a3a;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "plane-svg contact-form";
+}
+
+.paper-plane {
+  grid-area: "plane-svg";
+  margin: 100px 150px 100px 150px;
+}
+
+.paper-plane svg {
+  width: 350px;
+  height: 270px;
+  cursor: pointer;
+  outline: none;
+}
+
+#animation-plane {
+  animation: fly 1.4s ease;
+  overflow: hidden;
+}
+
+.contact-form {
+  grid-area: "contact-form";
+  margin: 60px;
+}
+
+.contact-form form {
+  width: 450px;
+  height: 40px;
+  margin: 25px;
+  text-align: center;
+}
+
+.contact-form .form-control {
+  background-color: #433a3a;
+  border-color: #f8bf3c;
+  color: #f8bf3c;
+}
+
+.contact-form .form-control::placeholder {
+  color: #f8bf3c;
+  text-transform: uppercase;
+}
+
+.contact-form button {
+  background-color: transparent;
+  border-color: #f8bf3c;
+  text-align: center;
+  color: #f8bf3c;
+  margin: 5px auto;
+}
+
+.contact-form button:hover {
+  cursor: pointer;
+  background-color: antiquewhite;
+  color: #f8bf3c;
+  border: none;
+  outline: none;
+}
+
+.contact-form button:focus {
+  outline: none;
+  border: none;
+  background-color: antiquewhite;
+  color: #f8bf3c;
+}
+
+@keyframes fly {
+  10% {
+    transform: translate(-10px, 10px);
+  }
+  40% {
+    transform: translate(-15px, 15px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, -100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}

@@ -1,7 +1,7 @@
 .project-card .card {
   width: 551px;
   height: 328px;
-  background-color: #fff;
+  /* background-color: #fff; */
   background: linear-gradient(#f8bf3c, #dab035);
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
@@ -73,13 +73,13 @@
   margin-right: 0;
   font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  /* letter-spacing: 0.1rem; */
 }
 
 .card .additional .more-info p {
   text-align: center;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .card .additional .stats {
@@ -107,7 +107,7 @@
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  /* letter-spacing: 0.1rem; */
 }
 
 .card .additional .stats #github-icon:hover {
@@ -132,7 +132,7 @@
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.03rem;
+  /* letter-spacing: 0.03rem; */
   position: relative;
   float: left;
   top: 50%;
