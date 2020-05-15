@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
 import "./Skills.css";
 
-const Skills = () => {
+const Skills = (props) => {
   const [isShowFilter, setIsShowFilter] = useState(false);
   const [hoverFilterButton, setHoverFilterButton] = useState({
     frontend: false,
@@ -14,19 +17,37 @@ const Skills = () => {
 
   const toggleHandler = () => setIsShowFilter((value) => !value);
 
+  const tooltip = (
+    <Tooltip className={props.showTooltip ? "out" : "in"} id="tooltip-right">
+      CLICK FOR FILTER OPTIONS
+    </Tooltip>
+  );
+
+  console.log(props.showTooltip);
+
   return (
     <div className="skills">
       {/* <hr></hr> */}
       <div className="skills-tree">
         <ul>
           <li>
-            <button
-              onClick={toggleHandler}
-              className="skills-button"
-              id={isShowFilter ? "isSkills-active" : "isSkills-deactive"}
+            <OverlayTrigger
+              key={"right"}
+              trigger="manual"
+              defaultShow={true}
+              placement={"right"}
+              delay={{ hide: 400 }}
+              overlay={tooltip}
             >
-              SKILLS
-            </button>
+              <button
+                onClick={toggleHandler}
+                className="skills-button"
+                id={isShowFilter ? "isSkills-active" : "isSkills-deactive"}
+              >
+                SKILLS
+              </button>
+            </OverlayTrigger>
+
             <div className="middle-connection"></div>
             <div
               className="branches"

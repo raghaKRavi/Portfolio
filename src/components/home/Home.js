@@ -4,7 +4,6 @@ import "./HomeStyle.css";
 
 import logo from "./KRRLogo.svg";
 import TypeWriter from "../typewrite/Typewrite";
-// import Projects from "../projects/Projects";
 import about from "./about-black.png";
 import Skills from "../skills/Skills";
 import ProjectCard from "../projectcard/ProjectCard";
@@ -15,6 +14,7 @@ const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
 const Home = () => {
   const [scrolling, setScrolling] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -22,6 +22,15 @@ const Home = () => {
         setScrolling(true);
       } else {
         setScrolling(false);
+        setShowTooltip(false);
+      }
+
+      if (window.pageYOffset > 2930) {
+        setShowTooltip(true);
+      } else if (window.pageYOffset > 3380) {
+        setShowTooltip(false);
+      } else {
+        setShowTooltip(false);
       }
     };
   }, []);
@@ -167,7 +176,7 @@ const Home = () => {
       <hr></hr>
 
       <section className="skills-section" id="skills">
-        <Skills />
+        <Skills showTooltip={showTooltip} />
         <IconSkills />
       </section>
 
