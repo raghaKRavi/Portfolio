@@ -230,9 +230,10 @@ nav {
 .about-section {
   height: 100vh;
   background-color: #f8bf3c;
+  overflow: hidden;
 }
 
-.about-img {
+/* .about-img {
   text-align: center;
 }
 
@@ -254,7 +255,7 @@ nav {
   color: #f8bf3c;
   font-size: 18px;
   align-self: right;
-}
+} */
 
 .project-section {
   background-color: #433a3a;

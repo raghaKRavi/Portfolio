@@ -1,0 +1,86 @@
+.about-subsection {
+  display: grid;
+  margin-top: 100px;
+  background-color: #433a3a;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+}
+
+.base {
+  /* width: 200px; */
+  /* border-top: 5px solid #433a3a; */
+  /* margin: auto; */
+  text-align: center;
+  position: relative;
+  padding: 0 0 30px;
+}
+.holder {
+  width: 30px;
+  height: 20px;
+  background: #f8bf3c;
+  margin: auto;
+  border-radius: 0 0 50% 50%;
+}
+
+.thread {
+  display: inline-block;
+  width: 2px;
+  height: 40%;
+  background: #f8bf3c;
+  position: relative;
+  transform-origin: 50% 0;
+  animation: moveIt 2.5s ease-in-out infinite;
+}
+
+.thread::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #433a3a;
+  border: 2px solid white;
+  top: -4.5px;
+  left: -3px;
+}
+.knob {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -18px;
+  left: -4.5px;
+  border: 2px solid #433a3aa4;
+  border-radius: 50%;
+  border-bottom: 2px solid transparent;
+}
+
+#pendulum-img {
+  width: 270px;
+  position: absolute;
+  bottom: -10px;
+  left: -125px;
+}
+
+#pendulum-img:hover {
+  cursor: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Scissors_icon_black.svg/1200px-Scissors_icon_black.svg.png"),
+    auto;
+}
+
+.about-text {
+  position: relative;
+  top: 10%;
+  /* text-align: center; */
+  padding-right: 30px;
+  color: #f8bf3c;
+  font-size: 20px;
+}
+
+@keyframes moveIt {
+  0%,
+  100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}

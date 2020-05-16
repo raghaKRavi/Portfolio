@@ -4,11 +4,12 @@ import "./HomeStyle.css";
 
 import logo from "./KRRLogo.svg";
 import TypeWriter from "../typewrite/Typewrite";
-import about from "./about-black.png";
+
 import Skills from "../skills/Skills";
 import ProjectCard from "../projectcard/ProjectCard";
 import IconSkills from "../IconSkills/IconSkills";
 import Contact from "../contact/Contact";
+import About from "../about/About";
 
 const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
@@ -109,7 +110,7 @@ const Home = () => {
       </section>
 
       <section className="about-section" id="about">
-        <div className="about-img">
+        {/* <div className="about-img">
           <img src={about} />
         </div>
 
@@ -125,7 +126,8 @@ const Home = () => {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-        </div>
+        </div> */}
+        <About />
       </section>
 
       <hr></hr>
