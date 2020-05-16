@@ -228,7 +228,7 @@ nav {
 }
 
 .about-section {
-  height: 100vh;
+  height: 100%;
   background-color: #f8bf3c;
   overflow: hidden;
 }
