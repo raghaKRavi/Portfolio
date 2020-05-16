@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
           <div className="user-card">
             {/* img tag */}
 
-            <img src={props.projectImg} />
+            <img src={props.projectImg} alt="project-img" />
           </div>
           <div className="more-info">
             <h1> {props.projectTitle}</h1>

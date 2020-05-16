@@ -8,6 +8,29 @@ button:focus {
   outline: none;
 }
 
+#tooltip-right {
+  position: relative;
+  z-index: 0 !important;
+}
+.in {
+  display: none;
+  transition: fade-in 1.8s ease-in;
+}
+.out {
+  display: block;
+  transition: fade-in 0.8s ease;
+}
+
+#tooltip-right > .tooltip-inner {
+  background-color: #f8bf3c;
+  color: #433a3a;
+  border: 1px solid #f8bf3c;
+}
+
+#tooltip-right > .tooltip-arrow::before {
+  border-right-color: red;
+}
+
 .skills-tree li {
   text-align: center;
   list-style: none;
@@ -399,5 +422,14 @@ button:focus {
   100% {
     left: 0;
     opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

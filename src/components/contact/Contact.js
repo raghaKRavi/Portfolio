@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Contact.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const [planeAnimation, setPlaneAnimation] = useState(false);
+
+  useEffect(() => {
+    AOS.init({ offset: 0, easing: "ease-in", duration: 3000 });
+  }, []);
+
   return (
     <div className="contact-body">
       <div className="contact-heading">
         <h3>GET IN TOUCH!</h3>
       </div>
-      <div className="back-line"></div>
+      <div data-aos="slide-right" className="back-line"></div>
 
       <div className="contact-grid">
         <div className="paper-plane">
