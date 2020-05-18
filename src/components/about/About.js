@@ -9,7 +9,7 @@ const About = () => {
         <div className="holder"></div>
         <div className="thread">
           <div className="knob"></div>
-          <img src={about} alt="about-image" id="pendulum-img" tabindex="1" />
+          <img src={about} alt="about-image" id="pendulum-img" tabIndex="1" />
         </div>
 
         {/* <div className="image-hang-line" id="left-hanging"></div> */}

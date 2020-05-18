@@ -5,11 +5,12 @@ import "./HomeStyle.css";
 import logo from "./KRRLogo.svg";
 import TypeWriter from "../typewrite/Typewrite";
 
-import Skills from "../skills/Skills";
 import ProjectCard from "../projectcard/ProjectCard";
-import IconSkills from "../IconSkills/IconSkills";
+// import Skills from "../skills/Skills";
+// import IconSkills from "../IconSkills/IconSkills";
 import Contact from "../contact/Contact";
 import About from "../about/About";
+import InfographicSkills from "../inforgraphicSkills/InforgraphicSkills";
 
 const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
@@ -71,6 +72,7 @@ const Home = () => {
       <section className="home-section">
         <div className="left-box">
           <h1>Raghavendar</h1>
+
           <div className="link-left">
             <a
               className="social-link"
@@ -110,23 +112,6 @@ const Home = () => {
       </section>
 
       <section className="about-section" id="about">
-        {/* <div className="about-img">
-          <img src={about} />
-        </div>
-
-        <div className="about-subsection">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div> */}
         <About />
       </section>
 
@@ -178,8 +163,10 @@ const Home = () => {
       <hr></hr>
 
       <section className="skills-section" id="skills">
-        <Skills showTooltip={showTooltip} />
-        <IconSkills />
+        {/* <Skills showTooltip={showTooltip} />
+        <IconSkills id="icon-skills" /> */}
+
+        <InfographicSkills />
       </section>
 
       <hr></hr>
