@@ -1,8 +1,9 @@
 .skills-tree {
   position: relative;
   margin: 0 auto;
-  top: 100px;
+  top: 80px;
   letter-spacing: 2rem;
+  height: 100%;
 }
 button:focus {
   outline: none;
