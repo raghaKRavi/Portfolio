@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import "./HomeStyle.css";
 
-import logo from "./KRRLogo.svg";
 import TypeWriter from "../typewrite/Typewrite";
 
 import ProjectCard from "../projectcard/ProjectCard";
@@ -12,102 +11,119 @@ import Contact from "../contact/Contact";
 import About from "../about/About";
 import InfographicSkills from "../inforgraphicSkills/InforgraphicSkills";
 
-const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAddressCard,
+  faLaptopCode,
+  faBrain,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
+
+import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+// const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
 const Home = () => {
   const [scrolling, setScrolling] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [showBurger, setShowBurger] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
-      if (window.pageYOffset > 600) {
+      if (window.pageYOffset > 0) {
         setScrolling(true);
       } else {
         setScrolling(false);
-        setShowTooltip(false);
-      }
-
-      if (window.pageYOffset > 2930) {
-        setShowTooltip(true);
-      } else if (window.pageYOffset > 3380) {
-        setShowTooltip(false);
-      } else {
-        setShowTooltip(false);
       }
     };
   }, []);
 
+  console.log(showBurger);
+
   return (
-    <div className="body">
-      <header id={scrolling ? "scrolling" : "not-scrolling"}>
-        <div className="logo-container">
-          <img src={logo} alt="logo" id="#logo" />
+    <div className="home-body">
+      {/* <header id={scrolling ? "sticky" : " "}>
+        <a href="#" className="logo">
+          Logo
+        </a>
+        <ul className="nav-links" id={showBurger ? "nav-active" : ""}>
+          <li>
+            <a href="#about">
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div
+          className="burger"
+          onClick={() => setShowBurger((value) => !value)}
+          id={showBurger ? "close-toggle" : ""}
+        >
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
         </div>
-        <nav id="">
-          <ul className="nav-links">
+      </header> */}
+
+      <nav id="sidenav">
+        <ul className="nav-icons">
+          <li id="nav-icon">
+            <a href="#about">
+              <FontAwesomeIcon icon={faAddressCard} />
+              <p>About</p>
+            </a>
+          </li>
+          <li id="nav-icon">
+            <a href="#projects">
+              <FontAwesomeIcon icon={faLaptopCode} />
+              <p>Projects</p>
+            </a>
+          </li>
+          <li id="nav-icon">
+            <a href="#skills">
+              <FontAwesomeIcon icon={faBrain} />
+              <p>Skills</p>
+            </a>
+          </li>
+          <li id="nav-icon">
+            <a href="#contact">
+              <FontAwesomeIcon icon={faPaperPlane} />
+              <p>Contact</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* home-page */}
+
+      <section className="home-page">
+        <h1>RAGHAVENDAR</h1>
+        <h2>
+          <span>RAVI</span>
+        </h2>
+        {/* <div id="social-button"></div> */}
+        <div id="social-sidebar">
+          <ul>
             <li>
-              <a className="nav-link" href="#about">
-                ABOUT
+              <a href="#">
+                <FontAwesomeIcon icon={faGithubSquare} />
+                <p>github</p>
               </a>
             </li>
             <li>
-              <a className="nav-link" href="#projects">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#skills">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="#contact">
-                Say Hello!!
+              <a href="#">
+                <FontAwesomeIcon icon={faLinkedin} />
+                <p>LinkedIn</p>
               </a>
             </li>
           </ul>
-        </nav>
-      </header>
-
-      <section className="home-section">
-        <div className="left-box">
-          <h1>Raghavendar</h1>
-
-          <div className="link-left">
-            <a
-              className="social-link"
-              href="https://github.com/Ragav25"
-              target="_blank"
-            >
-              <i
-                className="fa fa-github-square"
-                id="github-icon"
-                title="GITHUB"
-              >
-                {/* <p>GITHUB</p> */}
-              </i>
-            </a>
-          </div>
-        </div>
-
-        <div className="right-box">
-          <h1>Ravi</h1>
-          <TypeWriter messages={msgs} />
-          <div className="link-right">
-            <a
-              className="social-link"
-              href="https://www.linkedin.com/in/raghavendar-ravi-48ab75137/"
-              target="_blank"
-            >
-              <i
-                className="fa fa-linkedin-square"
-                id="linkedin-icon"
-                title="LinkedIn"
-              >
-                {/* <p>LINKEDIN</p> */}
-              </i>
-            </a>
-          </div>
         </div>
       </section>
 

@@ -20,243 +20,366 @@ button {
   border: none;
   outline: none;
 }
+.home-body {
+  overflow: hidden;
+}
+
+/* side navbar */
+
+#sidenav {
+  height: 100vh;
+  width: 5.5vw;
+  background-color: transparent;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+#sidenav:hover {
+  background-color: #f8bf3c;
+  width: 10vw;
+}
+
+#sidenav .nav-icons {
+  margin: 0px auto;
+  text-align: center;
+  display: block;
+}
+
+#sidenav ul li {
+  font-size: 2vw;
+  list-style: none;
+  margin: 6vh auto;
+  cursor: pointer;
+}
+
+#sidenav ul li a {
+  color: #f8bf3c;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+
+#sidenav ul li p {
+  font-size: 1vw;
+  margin: -2px;
+  -webkit-animation: blur-out-contract-bck 0.5s both;
+  animation: blur-out-contract-bck 0.5s both;
+}
+
+#sidenav:hover p {
+  opacity: 1;
+  -webkit-animation: focus-in-expand-fwd 0.5s both;
+  animation: focus-in-expand-fwd 0.5s both;
+}
+
+#sidenav:hover a {
+  color: #433a3a;
+}
+
+/* side nav animation */
+@-webkit-keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+    transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+    transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blur-out-contract-bck {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-500px);
+    transform: translateZ(-500px);
+    -webkit-filter: blur(10px) opacity(0%);
+    filter: blur(10px) opacity(0%);
+  }
+}
+@keyframes blur-out-contract-bck {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-500px);
+    transform: translateZ(-500px);
+    -webkit-filter: blur(10px) opacity(0%);
+    filter: blur(10px) opacity(0%);
+  }
+}
+
+/* side nav end */
 
 header {
-  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 10vh;
-  margin: auto;
-  align-items: center;
-  position: sticky;
-  top: 0px;
-  z-index: 9;
-  transition: all 0.5 linear;
-}
-
-#scrolling {
-  background-color: #f8bf3c;
-  transition: all 0.8s ease;
-}
-#not-scrolling {
-  background-color: transparent;
-  transition: all 0.5s ease;
-}
-
-.logo-container {
-  flex: 1;
-  margin-left: 7%;
-}
-
-nav {
-  flex: 2;
-}
-
-.nav-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 10000;
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: -10px;
+}
+
+header li {
+  position: relative;
   list-style: none;
 }
 
-.nav-link {
-  color: #433a3a;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
+header li a {
+  position: relative;
+  margin: 0 25px;
   text-decoration: none;
-  margin: 15px 20px 0px 10px;
-  letter-spacing: 10.5%;
-}
-
-.home-section {
-  height: 100.9vh;
-  margin-top: -70px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "left-box right-box";
-}
-
-.left-box {
-  grid-area: left-box;
-  background-color: #433a3a;
-}
-
-.left-box h1 {
-  text-align: end;
-  margin-right: 10px;
-  margin-top: 30%;
   font-weight: bold;
-  font-size: 48px;
-  text-transform: uppercase;
-  color: #f8bf3c;
-}
-
-.right-box {
-  grid-area: right-box;
-  background-color: #f8bf3c;
-}
-
-.right-box h1 {
-  text-align: start;
-  margin-left: 10px;
-  margin-top: 35%;
-  font-weight: bold;
-  font-size: 48px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
   color: #433a3a;
+  transition: 0.6s;
+  font-size: 17px;
+  text-transform: uppercase;
 }
-/*  */
-.link-left {
-  position: absolute;
-  width: 85px;
-  height: 50px;
-  background-color: #433a3a;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden;
-  right: 50%;
-  top: 53%;
-  text-align: center;
+
+header li a:hover {
+  color: lavender;
+}
+
+.burger {
+  display: none;
   cursor: pointer;
 }
 
-.link-left:before {
-  content: "GITHUB";
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #433a3a;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* scrolling navbar effect */
+#sticky {
+  padding: 15px 100px;
+  background-color: #433a3a;
+}
+
+#sticky ul li {
+  margin-top: 8px;
+}
+
+#sticky ul li a {
+  color: #f8bf3c;
+}
+
+#sticky .burger div {
+  background-color: #f8bf3c;
+}
+
+/* home page section */
+
+.home-page {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-linear-gradient(left, #433a3a 50%, #f8bf3c 50%);
+  overflow: hidden;
+}
+.home-page h2 {
+  /* RAVI */
+  position: absolute;
+  color: #433a3a;
+  font-size: 3vw;
+  top: 45%;
+  left: 56%;
+  -ms-transform: translate(-56%, -45%);
+  transform: translate(-56%, -45%);
+}
+
+.home-page h1 {
+  /* Raghavendar */
+  position: absolute;
+  color: #f8bf3c;
+  text-align: center;
+  font-size: 3vw;
+  top: 40%;
+  left: 30%;
+  -ms-transform: translate(-30%, -40%);
+  transform: translate(-30%, -40%);
+}
+
+#social-sidebar {
+  width: 50px;
+  height: 100px;
+  background-color: transparent;
+  float: right;
+  height: 100vh;
+  width: 6vw;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.5s;
+}
+
+#social-sidebar:hover {
+  width: 8vw;
+  background-color: #433a3a;
+  color: #f8bf3c;
+}
+
+#social-sidebar ul {
+  margin: 0px auto;
+  display: block;
+  text-align: center;
+  margin-top: 26vh;
+}
+
+#social-sidebar ul li {
+  font-size: 2vw;
+  list-style: none;
+  cursor: pointer;
+  margin: 6vh auto;
+}
+
+#social-sidebar ul li a {
+  color: #433a3a;
+  text-transform: uppercase;
+}
+
+#social-sidebar ul li p {
+  font-size: 1vw;
+  margin: -2px;
+  -webkit-animation: blur-out-contract-bck 0.5s both;
+  animation: blur-out-contract-bck 0.5s both;
+}
+
+#social-sidebar:hover a {
+  color: #f8bf3c;
+}
+
+#social-sidebar:hover p {
+  opacity: 1;
+  -webkit-animation: focus-in-expand-fwd 0.5s both;
+  animation: focus-in-expand-fwd 0.5s both;
+}
+
+/* #social-button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -60%);
+  transform: translate(-50%, -60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 60px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+#social-button::before,
+#social-button::after {
   position: absolute;
   top: 0;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 100%;
   transition: 0.25s linear;
   z-index: 1;
-  padding-left: 15px;
-  padding-top: 0.05rem;
+}
+
+#social-button::before {
+  content: "GITHUB";
+  padding-left: 17px;
   color: #433a3a;
-  font-size: 12px;
-  font-weight: bold;
-  left: 0;
-  justify-content: flex-start;
   background-color: #f8bf3c;
-  letter-spacing: 0.05rem;
+  left: 0;
+  font-size: 12px;
+}
+#social-button::after {
+  content: "LINKEDIN";
+  padding-left: 7px;
+  color: #f8bf3c;
+  background-color: #433a3a;
+  right: 0;
+  font-size: 12px;
 }
 
-.link-left:hover {
-  background-color: #ffffff;
-  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+#social-button:hover {
+  background-color: aliceblue;
+  cursor: pointer;
 }
 
-.link-left:hover:before {
-  opacity: 0.8;
+#social-button:hover::before {
+  opacity: 0.5;
   transform: translateY(-100%);
 }
-
-.social-link i {
-  font-size: 30px;
-  padding: 12px;
-  padding-bottom: 0px;
-  color: #433a3a;
-  display: inline-block;
-
-  transform: scale(1);
-  transition: 0.25s;
-}
-.social-link i p {
-  font-size: 8px;
-}
-
-.social-link:hover i {
-  animation: bounce 0.4s linear;
-}
-.social-link:hover #github-icon {
-  color: #000000;
-}
-
-.social-link:hover #linkedin-icon {
-  color: #0e76a8;
-}
-
-.link-right {
-  position: absolute;
-  width: 85px;
-  height: 50px;
-  background-color: #bbaeae00;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden;
-  left: 50%;
-  top: 53%;
-
-  text-align: center;
-  cursor: pointer;
-}
-
-.link-right::after {
-  content: "LINKEDIN";
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: 0.25s linear;
-  z-index: 1;
-  padding-left: 5px;
-  background-color: #433a3a;
-  font-size: 12px;
-  font-weight: bold;
-  left: 0;
-  justify-content: flex-start;
-  color: #f8bf3c;
-  letter-spacing: 0.05rem;
-}
-
-.link-right:hover {
-  background-color: #ffffff;
-  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
-}
-
-.link-right:hover:after {
+#social-button:hover::after {
   opacity: 0.5;
   transform: translateY(100%);
-}
+} */
+
+/* home page end */
 
 .about-section {
-  height: 100%;
+  min-height: 100%;
   background-color: #f8bf3c;
   overflow: hidden;
 }
-
-/* .about-img {
-  text-align: center;
-}
-
-.about-img img {
-  width: 300px;
-  margin-top: 70px;
-  cursor: pointer;
-}
-
-.about-subsection {
-  background-color: #433a3a;
-  height: 100%;
-  margin-top: -17px;
-  padding: 30px;
-}
-
-.about-section p {
-  text-align: left;
-  color: #f8bf3c;
-  font-size: 18px;
-  align-self: right;
-} */
 
 .project-section {
   background-color: #433a3a;
@@ -357,3 +480,5 @@ hr {
     transform: scale(1);
   }
 }
+
+/* responsive */

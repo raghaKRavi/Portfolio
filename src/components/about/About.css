@@ -3,7 +3,7 @@
   margin-top: 100px;
   background-color: #433a3a;
   height: 100vh;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
 }
 
 .base {
@@ -25,7 +25,7 @@
 .thread {
   display: inline-block;
   width: 2px;
-  height: 40%;
+  height: 70%;
   background: #f8bf3c;
   position: relative;
   transform-origin: 50% 0;
@@ -67,12 +67,17 @@
 }
 
 .about-text {
+  text-align: center;
   position: relative;
-  top: 10%;
+  padding: 5px 100px;
+  /* top: 10%; */
+
   /* text-align: center; */
-  padding-right: 30px;
+  /* padding-right: 30px; */
   color: #f8bf3c;
   font-size: 20px;
+  line-height: 2.5rem;
+  /* background-color: antiquewhite; */
 }
 
 @keyframes moveIt {
@@ -82,5 +87,51 @@
   }
   50% {
     transform: rotate(-10deg);
+  }
+}
+
+/* responsive */
+
+@media screen and (max-width: 1300px) {
+  .about-subsection {
+    height: 65vh;
+    grid-template-rows: 0.7fr 1fr;
+  }
+  .about-text {
+    font-size: 16px;
+    top: 15%;
+    line-height: 30px;
+  }
+
+  #pendulum-img {
+    width: 200px;
+    left: -95px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .about-subsection {
+    height: 80vh;
+    grid-template-rows: 0.7fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-subsection {
+    height: 100vh;
+    grid-template-rows: 0.7fr 1fr;
+  }
+  .about-text {
+    font-size: 15px;
+    top: 0;
+    line-height: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0;
+  }
+
+  #pendulum-img {
+    width: 150px;
+    left: -70px;
   }
 }
