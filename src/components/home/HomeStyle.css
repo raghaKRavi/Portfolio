@@ -52,13 +52,13 @@ button {
   font-size: 2vw;
   list-style: none;
   margin: 6vh auto;
-  cursor: pointer;
 }
 
 #sidenav ul li a {
   color: #f8bf3c;
   font-size: 1.5vw;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #sidenav ul li p {
@@ -289,13 +289,13 @@ header li a:hover {
 #social-sidebar ul li {
   font-size: 2vw;
   list-style: none;
-  cursor: pointer;
   margin: 6vh auto;
 }
 
 #social-sidebar ul li a {
   color: #433a3a;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #social-sidebar ul li p {
@@ -376,8 +376,8 @@ header li a:hover {
 /* home page end */
 
 .about-section {
-  min-height: 100%;
-  background-color: #f8bf3c;
+  min-height: 80vh;
+  background-color: #433a3a;
   overflow: hidden;
 }
 

@@ -1,21 +1,19 @@
 import React from "react";
 import "./About.css";
-import about from "../../img/anew.png";
+import about from "../../img/about-img.png";
 
 const About = () => {
   return (
     <div className="about-subsection">
-      <div className="base">
+      {/* <div className="base">
         <div className="holder"></div>
         <div className="thread">
           <div className="knob"></div>
           <img src={about} alt="about-image" id="pendulum-img" tabIndex="1" />
         </div>
+      </div> */}
 
-        {/* <div className="image-hang-line" id="left-hanging"></div> */}
-      </div>
-
-      <div className="about-text">
+      {/* <div className="about-text">
         <p>
           I am a <span>Developer</span>, currently working as a Software
           Developer Intern. I enjoy building everythig from Small Bussiness Stes
@@ -23,6 +21,28 @@ const About = () => {
           for a Freelancer or an Employer looking to Hire, you can get in touch
           with me.
           <br /> Thank you.
+        </p>
+      </div> */}
+
+      <div id="about-img">
+        {/* <h1>ABOUT!</h1> */}
+        <img src={about} alt="ABOUT" />
+      </div>
+
+      <div id="about-text">
+        <p>
+          I am a <span>Developer</span>, currently working as a Software
+          Developer Intern. I enjoy building everythig from Small Bussiness Stes
+          to Rich Interactive Web Applications. If you're a Bussiness Seeking
+          for a Freelancer or an Employer looking to Hire, you can get in touch
+          with me.
+          <br /> Thank you.
+        </p>
+      </div>
+      <div className="email">
+        <p>
+          e-mail:
+          <a href="mailto:ragavravi25@gmail.com">ragavravi25@gmail.com</a>
         </p>
       </div>
     </div>
