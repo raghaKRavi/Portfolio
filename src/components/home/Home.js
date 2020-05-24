@@ -20,8 +20,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
-// const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
+import ProjectSlider from "../projectslider/ProjectSlider";
 
 const Home = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -37,42 +36,11 @@ const Home = () => {
     };
   }, []);
 
-  console.log(showBurger);
+  const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
   return (
     <div className="home-body">
-      {/* <header id={scrolling ? "sticky" : " "}>
-        <a href="#" className="logo">
-          Logo
-        </a>
-        <ul className="nav-links" id={showBurger ? "nav-active" : ""}>
-          <li>
-            <a href="#about">
-              <span>About</span>
-            </a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <div
-          className="burger"
-          onClick={() => setShowBurger((value) => !value)}
-          id={showBurger ? "close-toggle" : ""}
-        >
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-        </div>
-      </header> */}
-
-      <nav id="sidenav">
+      <nav className="sidenav" id={scrolling ? "scrolling" : "not--scrolling"}>
         <ul className="nav-icons">
           <li id="nav-icon">
             <a href="#about">
@@ -81,7 +49,7 @@ const Home = () => {
             </a>
           </li>
           <li id="nav-icon">
-            <a href="#projects">
+            <a href="#project-container">
               <FontAwesomeIcon icon={faLaptopCode} />
               <p>Projects</p>
             </a>
@@ -133,7 +101,7 @@ const Home = () => {
 
       <hr></hr>
 
-      <section className="project-section" id="projects">
+      {/* <section className="project-section" id="projects">
         <div className="sidenav-project">
           <p className="vertical-text">Projects</p>
         </div>
@@ -172,6 +140,45 @@ const Home = () => {
               "https://gifimage.net/wp-content/uploads/2017/10/credit-card-gif-3.gif"
             }
             projectTitle={"cerdit card fraud detection"}
+          />
+        </div>
+      </section> */}
+
+      {/* new project section */}
+
+      <section id="project-container">
+        <div className="project-sidebar">
+          <p>projects</p>
+        </div>
+
+        <div className="project-zero">
+          <ProjectSlider
+            projectname={"object search application with transfer learning"}
+            projectdescription={
+              "The application will scan the object through camera and helps to find the near-by stores to buy the product. It is created using Python and Android Studio with the help of Tensorflow library."
+            }
+          />
+        </div>
+        <hr></hr>
+        <div className="project-zero">
+          <ProjectSlider projectname={"twitter clone in google app engine"} />
+        </div>
+        <hr></hr>
+        <div className="project-zero">
+          <ProjectSlider
+            projectname={"credit card fraud detection in data mining"}
+          />
+        </div>
+        <hr></hr>
+        <div className="project-zero">
+          <ProjectSlider
+            projectname={"anagram search engine in google app engine"}
+          />
+        </div>
+        <hr></hr>
+        <div className="project-zero">
+          <ProjectSlider
+            projectname={"bee-hive(A to-do application) in React "}
           />
         </div>
       </section>

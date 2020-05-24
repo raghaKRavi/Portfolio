@@ -20,16 +20,12 @@ button {
   border: none;
   outline: none;
 }
-.home-body {
-  overflow: hidden;
-}
 
 /* side navbar */
 
-#sidenav {
+.sidenav {
   height: 100vh;
   width: 5.5vw;
-  background-color: transparent;
   position: fixed;
   z-index: 3;
   display: flex;
@@ -37,45 +33,73 @@ button {
   transition: all 0.5s;
 }
 
-#sidenav:hover {
+#not-scrolling {
+  background-color: transparent;
+}
+
+#scrolling {
+  background: #f8bf3c;
+}
+
+#not--scrolling:hover {
   background-color: #f8bf3c;
+}
+
+#scrolling:hover {
+  background-color: #f8bf3c;
+}
+
+.sidenav:hover {
+  /* background-color: #f8bf3c; */
   width: 10vw;
 }
 
-#sidenav .nav-icons {
+.sidenav .nav-icons {
   margin: 0px auto;
   text-align: center;
   display: block;
 }
 
-#sidenav ul li {
+.sidenav ul li {
   font-size: 2vw;
   list-style: none;
   margin: 6vh auto;
 }
 
-#sidenav ul li a {
-  color: #f8bf3c;
+.sidenav ul li a {
   font-size: 1.5vw;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-#sidenav ul li p {
+#not--scrolling ul li a {
+  color: #f8bf3c;
+}
+#scrolling ul li a {
+  color: #433a3a;
+}
+
+.sidenav ul li p {
   font-size: 1vw;
   margin: -2px;
   -webkit-animation: blur-out-contract-bck 0.5s both;
   animation: blur-out-contract-bck 0.5s both;
 }
 
-#sidenav:hover p {
+.sidenav:hover p {
   opacity: 1;
   -webkit-animation: focus-in-expand-fwd 0.5s both;
   animation: focus-in-expand-fwd 0.5s both;
 }
 
-#sidenav:hover a {
+#not--scrolling:hover a,
+#scrolling:hover a {
   color: #433a3a;
+}
+
+#scrolling ul li a:hover,
+#not--scrolling ul li a:hover {
+  color: #fff;
 }
 
 /* side nav animation */
@@ -262,8 +286,6 @@ header li a:hover {
 }
 
 #social-sidebar {
-  width: 50px;
-  height: 100px;
   background-color: transparent;
   float: right;
   height: 100vh;
@@ -381,7 +403,7 @@ header li a:hover {
   overflow: hidden;
 }
 
-.project-section {
+/* .project-section {
   background-color: #433a3a;
   height: 250vh;
   display: grid;
@@ -445,6 +467,43 @@ header li a:hover {
 
 .project-04 {
   grid-area: project-04;
+} */
+
+#project-container {
+  min-height: 100vh;
+  background-color: #433a3a;
+}
+
+div.project-sidebar {
+  position: relative;
+  background-color: #f8bf3c;
+  width: 6vw;
+  min-height: 325.4vh;
+  height: auto;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#project-container .project-sidebar p {
+  position: sticky;
+  top: 4%;
+  bottom: 5%;
+  font-weight: bold;
+  font-size: 1.8vw;
+  height: 10vw;
+  margin: 10vw auto;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  color: #433a3a;
+}
+
+.project-zero {
+  width: 100%;
+  height: 65vh;
+  /* background-color: chartreuse; */
 }
 
 .skills-section {
