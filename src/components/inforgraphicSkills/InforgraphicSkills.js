@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faLeaf, faToriiGate } from "@fortawesome/free-solid-svg-icons";
 
-const InfographicSkills = () => {
+const InfographicSkills = (props) => {
   return (
     <>
       <div className="infograph">
