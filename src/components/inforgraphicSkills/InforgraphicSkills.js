@@ -18,7 +18,7 @@ const InfographicSkills = (props) => {
   return (
     <>
       <div className="infograph">
-        <div className="text">
+        <div className="skill-heading-text">
           <h2>SKILLS</h2>
         </div>
         <div className="straight-line" id="zero-hline"></div>
