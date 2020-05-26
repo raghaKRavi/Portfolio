@@ -1,0 +1,38 @@
+.skill-container {
+  position: relative;
+}
+
+.skills-img {
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.skills-img img {
+  width: 20vw;
+}
+
+.brain-svg {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  margin-right: 3%;
+}
+.brain-svg svg {
+  width: 91vw;
+  height: 99vh;
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+  .skills-img img {
+    width: 50vw;
+  }
+  .brain-svg {
+    margin-top: -2vh;
+  }
+  .brain-svg svg {
+    width: 90vw;
+    height: 70vh;
+  }
+}
