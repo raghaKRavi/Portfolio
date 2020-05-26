@@ -21,6 +21,7 @@ import {
 
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectSlider from "../projectslider/ProjectSlider";
+import SkillSection from "../skills/SkillSection";
 
 const Home = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -189,7 +190,8 @@ const Home = () => {
         {/* <Skills showTooltip={showTooltip} />
         <IconSkills id="icon-skills" /> */}
 
-        <InfographicSkills />
+        {/* <InfographicSkills /> */}
+        <SkillSection />
       </section>
 
       <hr></hr>

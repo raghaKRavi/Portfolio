@@ -1,22 +1,21 @@
 .infograph {
   position: relative;
-
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
-.text {
+.skill-heading-text {
   border-width: 0 0px 2px 0;
   border-style: solid;
-  border-color: burlywood;
-  width: 25%;
+  border-color: #f8bf3c;
+  width: 20vw;
   margin: 20px auto;
   margin-bottom: 0;
 }
 .infograph h2 {
   text-align: center;
   color: #f8bf3c;
-  margin-bottom: -5px;
-  font-size: 60px;
+  margin-bottom: -0.4vw;
+  font-size: 4vw;
 }
 
 .straight-line {
@@ -56,11 +55,11 @@
   border-width: 2px 2px 0px 0;
   border-style: solid;
   border-radius: 2px;
-  border-color: #f8bf3c;
-  width: 17%;
+  border-color: red;
+  width: 17vw;
   height: 30px;
-  left: 52%;
-  top: 150px;
+  left: 45%;
+  transform: translateX(45%);
 }
 
 .connect-line-left {
@@ -111,7 +110,7 @@
 }
 
 #fd-vline {
-  top: 150px;
+  top: 15vh;
 }
 
 #bd-vline {
