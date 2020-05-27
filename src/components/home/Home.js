@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./HomeStyle.css";
 
 import Contact from "../contact/Contact";
+import ContactSection from "../contact/ContactSection";
 import About from "../about/About";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -141,7 +142,8 @@ const Home = () => {
 
       <hr></hr>
       <section className="contact-section" id="contact">
-        <Contact />
+        {/* <Contact /> */}
+        <ContactSection />
       </section>
     </div>
   );
