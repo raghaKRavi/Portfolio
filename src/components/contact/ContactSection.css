@@ -1,0 +1,187 @@
+.contact-subsection {
+  /* background-color: cadetblue; */
+  height: 100%;
+  overflow: hidden;
+}
+
+.paper-plane-container {
+  width: 10vw;
+  height: 19vh;
+  background-color: #f8bf3c;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 6vh;
+  margin-bottom: -10vh;
+}
+
+.paper-plane-container svg {
+  font-size: 3vw;
+  color: #433a3a;
+  z-index: 1;
+}
+
+.contact-container {
+  width: 100%;
+  min-height: 100%;
+  background: #f8bf3c;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-container h2 {
+  margin-top: 8vh;
+  font-size: 3vw;
+  color: #433a3a;
+}
+
+.contact-container form {
+  margin: 0 auto;
+  width: 50vw;
+}
+.contact-container .form-control {
+  background-color: #433a3a;
+  border: none;
+  color: whitesmoke;
+  margin-top: 4vh;
+  font-size: 1.2vw;
+}
+
+.contact-container .form-control::placeholder {
+  color: #f8bf3c;
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.contact-container form button {
+  background-color: #433a3a;
+  outline: none;
+  border: none;
+  color: #f8bf3c;
+  margin-top: 2vh;
+  font-size: 1.5vw;
+}
+
+.contact-container form button:hover {
+  color: #433a3a;
+  background-color: white;
+}
+
+.contact-container .contact-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #433a3a;
+  height: 30vh;
+}
+
+.contact-container .contact-footer p {
+  color: #f8bf3c;
+  font-size: 1.3vw;
+  text-transform: uppercase;
+  margin-top: 2vh;
+}
+
+.contact-container .contact-footer p a {
+  color: #f8bf3c;
+}
+
+.contact-container .contact-footer p a:hover {
+  color: whitesmoke;
+}
+
+.social-network-link ul {
+  /* background-color: aliceblue; */
+  display: flex;
+  justify-content: center;
+}
+
+.social-network-link ul li {
+  list-style: none;
+  margin-right: 2vw;
+  font-size: 1.7vw;
+  margin-top: -13px;
+}
+
+.social-network-link ul li a {
+  cursor: pointer;
+}
+.social-network-link ul li #github-link,
+.social-network-link ul li #linkedin-link {
+  color: #f8bf3c;
+}
+
+.social-network-link ul li #github-link:hover {
+  color: black;
+}
+.social-network-link ul li #linkedin-link:hover {
+  color: #0e76a8;
+}
+
+@media screen and (max-width: 1280px) {
+  .paper-plane-container {
+    width: 10vw;
+    height: 17vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .paper-plane-container {
+    width: 10vw;
+    height: 15vh;
+    margin-top: 7vh;
+    margin-bottom: -10vh;
+  }
+
+  .paper-plane-container svg {
+    margin-bottom: 5vh;
+  }
+  .contact-container form {
+    width: 80vw;
+  }
+
+  .contact-container .form-control {
+    margin-top: 3vh;
+    font-size: 1.2vw;
+  }
+
+  .contact-container form button {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .paper-plane-container {
+    width: 19vw;
+    height: 17vh;
+  }
+  .paper-plane-container svg {
+    font-size: 6vw;
+  }
+  .contact-container h2 {
+    font-size: 8vw;
+  }
+  .contact-container form {
+    margin-top: 6vh;
+    width: 80vw;
+  }
+  .contact-container .form-control {
+    margin-top: 3vh;
+    font-size: 2.5vw;
+  }
+  .contact-container .form-control::placeholder {
+    font-size: 2.5vw;
+  }
+  .contact-container form button {
+    font-size: 2.5vw;
+  }
+  .contact-container .contact-footer p {
+    font-size: 3vw;
+  }
+  .social-network-link ul li {
+    font-size: 6vw;
+  }
+}
