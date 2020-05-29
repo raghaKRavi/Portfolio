@@ -24,6 +24,10 @@
   z-index: 1;
 }
 
+.paper-plane-container #animation {
+  animation: fly 1.4s ease;
+}
+
 .contact-container {
   width: 100%;
   min-height: 100%;
@@ -69,6 +73,10 @@
 .contact-container form button:hover {
   color: #433a3a;
   background-color: white;
+}
+.contact-container form button:focus {
+  color: #433a3a;
+  background-color: transparent;
 }
 
 .contact-container .contact-footer {
@@ -122,6 +130,21 @@
   color: #0e76a8;
 }
 
+.sent-message {
+  color: #433a3a;
+  font-size: 1.5vw;
+  display: none;
+  text-transform: uppercase;
+}
+
+#show-message {
+  display: block;
+}
+
+#hide-messgae {
+  display: none;
+}
+
 @media screen and (max-width: 1280px) {
   .paper-plane-container {
     width: 10vw;
@@ -152,6 +175,24 @@
     font-size: 1.8vw;
   }
 }
+
+/* animation */
+
+@keyframes fly {
+  10% {
+    transform: translate(-10px, 10px);
+  }
+  40% {
+    transform: translate(-15px, 15px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, -100vh);
+    opacity: 0;
+  }
+}
+
+/* responsive */
 
 @media screen and (max-width: 500px) {
   .paper-plane-container {
