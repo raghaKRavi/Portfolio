@@ -29,6 +29,8 @@ button {
   position: fixed;
   z-index: 3;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   transition: all 0.5s;
 }
@@ -102,6 +104,21 @@ button {
   color: #fff;
 }
 
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 4px;
+  background-color: #433a3a;
+  margin: 5px;
+}
+
+.close-button {
+  display: none;
+}
+
 /* side nav animation */
 @-webkit-keyframes focus-in-expand-fwd {
   0% {
@@ -171,7 +188,85 @@ button {
 
 /* side nav end */
 
-header {
+/* responsive side navbar */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+    float: right;
+    left: 4%;
+    top: 5%;
+    background-color: #f8c03cd7;
+    position: fixed;
+    z-index: 2;
+    border-radius: 2px;
+  }
+
+  .close-button {
+    display: block;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    font-size: 40px;
+  }
+
+  .sidenav {
+    width: 100%;
+    background-color: #f8bf3c;
+    z-index: 9999;
+  }
+
+  .offsidenav {
+    display: none;
+  }
+
+  .onsidenav {
+    /* display: block; */
+  }
+
+  #scrolling {
+    background-color: #f8bf3c;
+  }
+
+  #not--scrolling ul li a {
+    color: #433a3a;
+  }
+  .sidenav ul {
+    margin-bottom: 0;
+    /* background-color: red; */
+  }
+
+  .sidenav ul li {
+    justify-content: center;
+    margin: 6vh;
+  }
+
+  .sidenav ul li a {
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+  }
+
+  .sidenav ul li a svg {
+    /* display: none; */
+  }
+  .sidenav ul li p {
+    animation: none;
+    font-size: 3vw;
+    margin-left: 2vw;
+  }
+  .sidenav:hover {
+    width: 100%;
+  }
+  .sidenav:hover p {
+    animation: none;
+  }
+}
+
+/* end responsive side navbar */
+
+/* header {
   position: fixed;
   top: 0;
   left: 0;
@@ -224,7 +319,7 @@ header li a:hover {
 }
 
 .burger {
-  display: none;
+  display: block;
   cursor: pointer;
 }
 
@@ -234,7 +329,7 @@ header li a:hover {
   background-color: #433a3a;
   margin: 5px;
   transition: all 0.3s ease;
-}
+} */
 
 /* scrolling navbar effect */
 #sticky {
