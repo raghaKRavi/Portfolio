@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin-top: 6vh;
+  margin-top: 4vh;
   margin-bottom: -10vh;
 }
 
@@ -167,8 +167,12 @@
   }
 
   .contact-container .form-control {
-    margin-top: 3vh;
+    margin-top: 4vh;
     font-size: 1.2vw;
+  }
+
+  #form-input {
+    height: 4vh;
   }
 
   .contact-container form button {

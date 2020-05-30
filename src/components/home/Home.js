@@ -17,6 +17,7 @@ import {
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectSlider from "../projectslider/ProjectSlider";
 import SkillSection from "../skills/SkillSection";
+import Footer from "../footer/Footer";
 
 const Home = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -144,6 +145,9 @@ const Home = () => {
       <section className="contact-section" id="contact">
         {/* <Contact /> */}
         <ContactSection />
+      </section>
+      <section className="footer-section" id="footer">
+        <Footer />
       </section>
     </div>
   );
