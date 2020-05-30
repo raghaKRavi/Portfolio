@@ -12,6 +12,7 @@ import {
   faLaptopCode,
   faBrain,
   faPaperPlane,
+  faWindowClose,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -33,11 +34,30 @@ const Home = () => {
     };
   }, []);
 
+  const burgerHandler = () => {
+    setShowBurger((value) => !value);
+  };
+
   const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
   return (
     <div className="home-body">
-      <nav className="sidenav" id={scrolling ? "scrolling" : "not--scrolling"}>
+      {/*  */}
+      <div className="burger" onClick={burgerHandler}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+      {/*  */}
+
+      {/* nav bar */}
+      <nav
+        className={showBurger ? "sidenav onsidenav" : "sidenav offsidenav"}
+        id={scrolling ? "scrolling" : "not--scrolling"}
+      >
+        <div className="close-button">
+          <FontAwesomeIcon icon={faWindowClose} onClick={burgerHandler} />
+        </div>
         <ul className="nav-icons">
           <li id="nav-icon">
             <a href="#about">
