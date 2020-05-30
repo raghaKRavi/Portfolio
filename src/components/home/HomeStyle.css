@@ -512,10 +512,15 @@ div.project-sidebar {
 }
 
 .contact-section {
-  height: 115vh;
+  height: 105vh;
 
   background-color: #433a3a;
   overflow: hidden;
+}
+
+.footer-section {
+  background-color: #433a3a;
+  height: 20vh;
 }
 
 hr {

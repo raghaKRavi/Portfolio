@@ -27,21 +27,13 @@ const initialState = {
 const ContactSection = () => {
   const [{ name, message, email, subject }, setState] = useState(initialState);
 
-  const [sent, setSent] = useState(false);
-
   const clearState = () => {
     setState({ ...initialState });
-    setSent(false);
   };
 
   const onChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
-  };
-
-  const onClick = (e) => {
-    const { value } = e.target;
-    setSent((value) => !value);
   };
 
   const { state, submit } = useForm({
@@ -65,6 +57,7 @@ const ContactSection = () => {
         <Form onSubmit={submit}>
           <Form.Group>
             <Form.Control
+              id="form-input"
               type="text"
               placeholder="Name"
               name="name"
@@ -76,6 +69,7 @@ const ContactSection = () => {
 
           <Form.Group>
             <Form.Control
+              id="form-input"
               type="email"
               placeholder="E-mail address"
               name="email"
@@ -87,6 +81,7 @@ const ContactSection = () => {
 
           <Form.Group>
             <Form.Control
+              id="form-input"
               type="text"
               placeholder="Subject"
               name="subject"
@@ -99,7 +94,7 @@ const ContactSection = () => {
           <Form.Group>
             <Form.Control
               as="textarea"
-              rows="3"
+              rows="4"
               placeholder="Message"
               name="message"
               value={message}
@@ -110,18 +105,16 @@ const ContactSection = () => {
 
           <div
             className="sent-message"
-            id={sent ? "show-message" : "hide-message"}
+            id={state.submitted ? "show-message" : "hide-message"}
           >
             Message Sent successfully..!!
           </div>
 
-          <Button type="submit" onClick={onClick}>
-            SUBMIT
-          </Button>
+          <Button type="submit">SUBMIT</Button>
         </Form>
 
         {/* footer */}
-        <div className="contact-footer">
+        {/* <div className="contact-footer">
           <p>
             e-mail:
             <a href="mailto:ragavravi25@gmail.com">ragavravi25@gmail.com</a>
@@ -148,7 +141,7 @@ const ContactSection = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
