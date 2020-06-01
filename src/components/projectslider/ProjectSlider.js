@@ -23,14 +23,35 @@ const ProjectSlider = (props) => {
     });
   }, []);
 
+  {
+    props.tags &&
+      props.tags.map((tag) => {
+        console.log(tag);
+      });
+  }
+
   return (
     <>
       <div className="blog-slider">
         <div className="blog-slider__wrp swiper-wrapper">
           <div className="blog-slider__item swiper-slide">
-            <div className="blog-slider__img"></div>
+            <div className="blog-slider__img">
+              <img
+                src="https://thumbs.gfycat.com/MistyBleakDrongo-size_restricted.gif"
+                alt="img"
+              />
+            </div>
             <div className="blog-slider__content">
-              <span className="slider__tags"></span>
+              <span className="slider__tags">
+                <ul>
+                  {props.tags &&
+                    props.tags.map(function (tag) {
+                      return <li>{tag}</li>;
+                    })}
+
+                  {props.tags}
+                </ul>
+              </span>
               <div className="slider__title">{props.projectname}</div>
               <div className="slider--icons">
                 <ul>

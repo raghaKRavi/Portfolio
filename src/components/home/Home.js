@@ -60,25 +60,25 @@ const Home = () => {
         </div>
         <ul className="nav-icons">
           <li id="nav-icon">
-            <a href="#about">
+            <a href="#about" onClick={burgerHandler}>
               <FontAwesomeIcon icon={faAddressCard} />
               <p>About</p>
             </a>
           </li>
           <li id="nav-icon">
-            <a href="#project-container">
+            <a href="#project-container" onClick={burgerHandler}>
               <FontAwesomeIcon icon={faLaptopCode} />
               <p>Projects</p>
             </a>
           </li>
           <li id="nav-icon">
-            <a href="#skills">
+            <a href="#skills" onClick={burgerHandler}>
               <FontAwesomeIcon icon={faBrain} />
               <p>Skills</p>
             </a>
           </li>
           <li id="nav-icon">
-            <a href="#contact">
+            <a href="#contact" onClick={burgerHandler}>
               <FontAwesomeIcon icon={faPaperPlane} />
               <p>Contact</p>
             </a>
@@ -129,6 +129,7 @@ const Home = () => {
             projectdescription={
               "The application will scan the object through camera and helps to find the near-by stores to buy the product. It is created using Python and Android Studio with the help of Tensorflow library."
             }
+            tags={["project", "check"]}
           />
         </div>
         <hr></hr>
