@@ -44,6 +44,12 @@ const ContactSection = () => {
     clearForm().then(clearState);
   }
 
+  // {
+  //   props.tags.map((tag) => {
+  //     console.log(tag);
+  //   });
+  // }
+
   return (
     <div className="contact-subsection">
       <div className="paper-plane-container">
@@ -112,36 +118,6 @@ const ContactSection = () => {
 
           <Button type="submit">SUBMIT</Button>
         </Form>
-
-        {/* footer */}
-        {/* <div className="contact-footer">
-          <p>
-            e-mail:
-            <a href="mailto:ragavravi25@gmail.com">ragavravi25@gmail.com</a>
-          </p>
-          <div className="social-network-link">
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/Ragav25"
-                  target="_blank"
-                  id="github-link"
-                >
-                  <FontAwesomeIcon icon={faGithubSquare} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/raghavendar-ravi-48ab75137/"
-                  target="_blank"
-                  id="linkedin-link"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div> */}
       </div>
     </div>
   );
