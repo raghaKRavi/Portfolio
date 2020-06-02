@@ -129,29 +129,93 @@ const Home = () => {
             projectdescription={
               "The application will scan the object through camera and helps to find the near-by stores to buy the product. It is created using Python and Android Studio with the help of Tensorflow library."
             }
-            tags={["project", "check"]}
+            projectTags={[
+              "Python",
+              "Tensorflow",
+              "Mobilenet",
+              "Android (Java)",
+            ]}
+            projectImg={
+              "https://thumbs.gfycat.com/MistyBleakDrongo-size_restricted.gif"
+            }
+            githubCursor={"not-allowed"}
+            demoCursor={"not-allowed"}
           />
         </div>
         <hr></hr>
         <div className="project-zero">
-          <ProjectSlider projectname={"twitter clone in google app engine"} />
+          <ProjectSlider
+            projectTags={[
+              "Python",
+              "Jinja2",
+              "Html",
+              "css",
+              "Google app engine",
+            ]}
+            projectImg={
+              "https://www.socialchamp.io/blog/wp-content/uploads/2019/06/twittercelebration.gif"
+            }
+            projectname={"twitter clone in google app engine"}
+            projectdescription={
+              "A Basic implementation of Twitter where a user can follow user and can post delete view tweets, created in Google App Engine using Python, Jinja 2, Html and css"
+            }
+            projectGithubLink={
+              "https://github.com/Ragav25/Twitter-Clone-Google-App-Engine"
+            }
+            demoCursor={"not-allowed"}
+          />
         </div>
         <hr></hr>
         <div className="project-zero">
           <ProjectSlider
+            projectTags={["R-Language", "Weka", "Data Mining"]}
+            projectImg={
+              "https://i.pinimg.com/originals/d9/52/be/d952bea71eedeba1345b0b18e0233f4a.gif"
+            }
             projectname={"credit card fraud detection in data mining"}
+            projectdescription={
+              "Detection of Fraudulence in Banking Sector using Data Mining techniques of Cluster (K-Means), Classification process (J48, Random Forest) and Class Balancer Technique on “Credit Card Fraud Dataset” in Weka and R-Language."
+            }
+            githubCursor={"not-allowed"}
+            demoCursor={"not-allowed"}
           />
         </div>
         <hr></hr>
         <div className="project-zero">
           <ProjectSlider
+            projectTags={[
+              "Python",
+              "Jinja 2",
+              "html",
+              "css",
+              "Google app engine",
+            ]}
+            projectImg={
+              "https://media0.giphy.com/media/MgOe9TFUhkX3G/source.gif"
+            }
             projectname={"anagram search engine in google app engine"}
+            projectdescription={
+              "With the help of Python, Jinja2 Template, Html and Css - developed a search engine in Google App Engine(Paas Cloud Platform) which will gives the anagram for input word, Also user can add their own set of anagrams"
+            }
+            projectGithubLink={
+              "https://github.com/Ragav25/anagaram-google-app-engine"
+            }
+            demoCursor={"not-allowed"}
           />
         </div>
         <hr></hr>
         <div className="project-zero">
           <ProjectSlider
-            projectname={"bee-hive(A to-do application) in React "}
+            projectTags={["React Hooks", "Context-API", , "HTML", "CSS"]}
+            projectImg={
+              "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ea5d0476339699.5c6694d453222.gif"
+            }
+            projectname={"bee-hive (A to-do application) in React "}
+            projectdescription={
+              "Bee-hive is an application where users can add, delete, and update their projects and tasks for each project individually. The Added Data will be stored to local Storage and can view it unless the page is hard refreshed or the data is deleted."
+            }
+            projectGithubLink={"https://github.com/Ragav25/To-Do_Application"}
+            demoCursor={"not-allowed"}
           />
         </div>
       </section>

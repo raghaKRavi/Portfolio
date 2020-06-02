@@ -23,46 +23,44 @@ const ProjectSlider = (props) => {
     });
   }, []);
 
-  {
-    props.tags &&
-      props.tags.map((tag) => {
-        console.log(tag);
-      });
-  }
-
   return (
     <>
       <div className="blog-slider">
         <div className="blog-slider__wrp swiper-wrapper">
           <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
-              <img
-                src="https://thumbs.gfycat.com/MistyBleakDrongo-size_restricted.gif"
-                alt="img"
-              />
+              <img src={props.projectImg} alt="project img" />
             </div>
             <div className="blog-slider__content">
               <span className="slider__tags">
                 <ul>
-                  {props.tags &&
-                    props.tags.map(function (tag) {
+                  {props.projectTags &&
+                    props.projectTags.map(function (tag) {
                       return <li>{tag}</li>;
                     })}
-
-                  {props.tags}
                 </ul>
               </span>
               <div className="slider__title">{props.projectname}</div>
               <div className="slider--icons">
                 <ul>
                   <li>
-                    <a href="#" id="github--icon">
+                    <a
+                      href={props.projectGithubLink}
+                      id="github--icon"
+                      target="_blank"
+                      style={{ cursor: props.githubCursor }}
+                    >
                       <FontAwesomeIcon icon={faGithubSquare} />
                       <p>github</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#" id="demo--icon">
+                    <a
+                      href={props.projectDemoLink}
+                      id="demo--icon"
+                      target="_blank"
+                      style={{ cursor: props.demoCursor }}
+                    >
                       <FontAwesomeIcon icon={faEye} />
                       <p>demo</p>
                     </a>
@@ -79,7 +77,9 @@ const ProjectSlider = (props) => {
           </div>
 
           <div className="blog-slider__item swiper-slide">
-            <div className="blog-slider__img"></div>
+            <div className="blog-slider__img">
+              <img src={props.projectImg} alt="project img" />
+            </div>
             <div className="blog-slider__content">
               <div className="slider__description">
                 {props.projectdescription}
@@ -87,13 +87,23 @@ const ProjectSlider = (props) => {
               <div className="slider--icons">
                 <ul>
                   <li>
-                    <a href="#" id="github--icon">
+                    <a
+                      href={props.projectGithubLink}
+                      id="github--icon"
+                      target="_blank"
+                      style={{ cursor: props.githubCursor }}
+                    >
                       <FontAwesomeIcon icon={faGithubSquare} />
                       <p>github</p>
                     </a>
                   </li>
                   <li>
-                    <a href="#" id="demo--icon">
+                    <a
+                      href={props.projectDemoLink}
+                      id="demo--icon"
+                      target="_blank"
+                      style={{ cursor: props.demoCursor }}
+                    >
                       <FontAwesomeIcon icon={faEye} />
                       <p>demo</p>
                     </a>
