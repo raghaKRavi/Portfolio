@@ -2,6 +2,11 @@ import React from "react";
 import "./About.css";
 import about from "../../img/about-img.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+
+import cv from "../../pdf/RaghavendarRavi-CV.pdf";
+
 const About = () => {
   return (
     <div className="about-subsection">
@@ -40,10 +45,18 @@ const About = () => {
         </p>
       </div>
       <div className="email">
-        <p>
+        <div className="footer-link">
+          <a href="#footer">Get in Touch</a>
+        </div>
+        <div className="resume">
+          <a href={cv} target="_blank">
+            Resume <FontAwesomeIcon icon={faFilePdf} />
+          </a>
+        </div>
+        {/* <p>
           e-mail:
           <a href="mailto:ragavravi25@gmail.com">ragavravi25@gmail.com</a>
-        </p>
+        </p> */}
       </div>
     </div>
   );
