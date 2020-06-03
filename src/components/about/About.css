@@ -44,25 +44,38 @@
 }
 
 .email {
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
   width: 60vw;
   margin: 10px auto;
 }
 
-.email p {
-  font-size: 1vw;
-  color: #433a3a;
+.email .footer-link,
+.email .resume {
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
-}
-
-.email p a {
+  background-color: #433a3a;
+  width: 12vw;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
   font-size: 1.2vw;
-  text-transform: none;
-  color: #433a3a;
 }
 
-.email p a:hover {
+.email .footer-link a {
+  color: #f8bf3c;
+}
+
+.email a:hover {
+  color: white;
+}
+
+.email .resume a {
+  color: #f8bf3c;
+}
+
+.email .resume a:hover {
   color: white;
 }
 
@@ -164,13 +177,15 @@
     font-size: 2.9vh;
     line-height: 3.9vh;
   }
-
-  .email p {
-    font-size: 2vw;
+  .email {
+    margin-top: 3vh;
   }
 
-  .email p a {
-    font-size: 2.3vw;
+  .email .footer-link,
+  .email .resume {
+    width: 20vw;
+    height: 5vh;
+    font-size: 2vw;
   }
 }
 @media screen and (max-width: 450px) {
@@ -190,14 +205,14 @@
 
   .email {
     width: auto;
+    margin-top: 5vh;
   }
 
-  .email p {
-    font-size: 3vw;
-  }
-
-  .email p a {
-    font-size: 3.5vw;
+  .email .footer-link,
+  .email .resume {
+    width: 25vw;
+    height: 5vh;
+    font-size: 2.5vw;
   }
 }
 
