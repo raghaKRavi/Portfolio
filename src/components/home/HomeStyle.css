@@ -264,73 +264,6 @@ button {
   }
 }
 
-/* end responsive side navbar */
-
-/* header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.6s;
-  padding: 40px 100px;
-  z-index: 10000;
-}
-
-header .logo {
-  position: relative;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: 0.6s;
-}
-
-header ul {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-right: -10px;
-}
-
-header li {
-  position: relative;
-  list-style: none;
-}
-
-header li a {
-  position: relative;
-  margin: 0 25px;
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #433a3a;
-  transition: 0.6s;
-  font-size: 17px;
-  text-transform: uppercase;
-}
-
-header li a:hover {
-  color: lavender;
-}
-
-.burger {
-  display: block;
-  cursor: pointer;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #433a3a;
-  margin: 5px;
-  transition: all 0.3s ease;
-} */
-
 /* scrolling navbar effect */
 #sticky {
   padding: 15px 100px;
@@ -432,137 +365,11 @@ header li a:hover {
   animation: focus-in-expand-fwd 0.5s both;
 }
 
-/* #social-button {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  -ms-transform: translate(-50%, -60%);
-  transform: translate(-50%, -60%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 60px;
-  border-radius: 9px;
-  overflow: hidden;
-}
-
-#social-button::before,
-#social-button::after {
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  transition: 0.25s linear;
-  z-index: 1;
-}
-
-#social-button::before {
-  content: "GITHUB";
-  padding-left: 17px;
-  color: #433a3a;
-  background-color: #f8bf3c;
-  left: 0;
-  font-size: 12px;
-}
-#social-button::after {
-  content: "LINKEDIN";
-  padding-left: 7px;
-  color: #f8bf3c;
-  background-color: #433a3a;
-  right: 0;
-  font-size: 12px;
-}
-
-#social-button:hover {
-  background-color: aliceblue;
-  cursor: pointer;
-}
-
-#social-button:hover::before {
-  opacity: 0.5;
-  transform: translateY(-100%);
-}
-#social-button:hover::after {
-  opacity: 0.5;
-  transform: translateY(100%);
-} */
-
-/* home page end */
-
 .about-section {
   min-height: 80vh;
   background-color: #433a3a;
   overflow: hidden;
 }
-
-/* .project-section {
-  background-color: #433a3a;
-  height: 250vh;
-  display: grid;
-  grid-template-columns: 0.18fr 1fr 1fr;
-  grid-template-rows: 0.1fr 1fr 1.2fr 1fr;
-  grid-template-areas:
-    "sidenav heading heading"
-    "sidenav project-01 project-02"
-    "sidenav project-03 project-04"
-    "sidenav . .";
-}
-
-.project-heading {
-  grid-area: heading;
-  justify-self: center;
-  align-self: center;
-  margin-bottom: -190px;
-}
-
-.project-heading h1 {
-  opacity: 0.2;
-  font-size: 106px;
-  text-transform: uppercase;
-  color: #f8bf3c;
-}
-
-.sidenav-project {
-  grid-area: sidenav;
-  background-color: #433a3a;
-}
-
-.sidenav-project .vertical-text {
-  color: #f8bf3c;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  text-transform: uppercase;
-  font-size: 27px;
-  letter-spacing: 10.5%;
-  font-weight: bold;
-  position: sticky;
-  top: 20%;
-  left: 45px;
-  margin-bottom: 200%;
-  margin-top: 160%;
-  line-height: 112.8%;
-}
-
-.project-01 {
-  grid-area: project-01;
-  margin-top: 60px;
-}
-
-.project-02 {
-  grid-area: project-02;
-  margin-top: 60px;
-}
-
-.project-03 {
-  grid-area: project-03;
-}
-
-.project-04 {
-  grid-area: project-04;
-} */
 
 #project-container {
   min-height: 100vh;
@@ -583,12 +390,13 @@ div.project-sidebar {
 
 #project-container .project-sidebar p {
   position: sticky;
-  top: 5%;
-  bottom: 5%;
+  top: 10%;
+  bottom: 50%;
   font-weight: bold;
   font-size: 1.8vw;
   height: 10vw;
   margin: 10vw auto;
+  margin-bottom: 15vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-transform: uppercase;
@@ -651,5 +459,24 @@ hr {
 
     background-color: #433a3a;
     overflow: hidden;
+  }
+
+  div.project-sidebar {
+    width: 8vw;
+  }
+
+  #project-container .project-sidebar p {
+    font-size: 3.2vw;
+    margin-bottom: 55vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  div.project-sidebar {
+    width: 7vw;
+  }
+
+  #project-container .project-sidebar p {
+    font-size: 3.2vw;
+    margin-bottom: 55vw;
   }
 }
