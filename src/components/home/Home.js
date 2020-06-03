@@ -93,17 +93,30 @@ const Home = () => {
         <h2>
           <span>RAVI</span>
         </h2>
+        <a href="https://github.com/Ragav25" id="responsive-github">
+          <FontAwesomeIcon icon={faGithubSquare} />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/raghavendar-ravi-48ab75137/"
+          id="responsive-linkedin"
+        >
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
         {/* <div id="social-button"></div> */}
         <div id="social-sidebar">
           <ul>
             <li>
-              <a href="#">
+              <a href="https://github.com/Ragav25" id="github-link">
                 <FontAwesomeIcon icon={faGithubSquare} />
                 <p>github</p>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/raghavendar-ravi-48ab75137/"
+                id="linkedin-link"
+              >
                 <FontAwesomeIcon icon={faLinkedin} />
                 <p>LinkedIn</p>
               </a>

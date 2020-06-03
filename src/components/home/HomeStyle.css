@@ -265,7 +265,7 @@ button {
 }
 
 /* scrolling navbar effect */
-#sticky {
+/* #sticky {
   padding: 15px 100px;
   background-color: #433a3a;
 }
@@ -280,7 +280,7 @@ button {
 
 #sticky .burger div {
   background-color: #f8bf3c;
-}
+} */
 
 /* home page section */
 
@@ -311,6 +311,11 @@ button {
   left: 30%;
   -ms-transform: translate(-30%, -40%);
   transform: translate(-30%, -40%);
+}
+
+#responsive-github,
+#responsive-linkedin {
+  display: none;
 }
 
 #social-sidebar {
@@ -363,6 +368,13 @@ button {
   opacity: 1;
   -webkit-animation: focus-in-expand-fwd 0.5s both;
   animation: focus-in-expand-fwd 0.5s both;
+}
+
+#social-sidebar ul li #github-link:hover {
+  color: black;
+}
+#social-sidebar ul li #linkedin-link:hover {
+  color: #0e76a8;
 }
 
 .about-section {
@@ -451,6 +463,55 @@ hr {
 /* responsive */
 
 @media screen and (max-width: 768px) {
+  .home-page {
+    background: -webkit-linear-gradient(top, #433a3a 50%, #f8bf3c 50%);
+  }
+  .home-page h2 {
+    /* RAVI */
+    color: #433a3a;
+    font-size: 5vw;
+    top: 53%;
+    left: 65%;
+    -ms-transform: translate(-65%, -53%);
+    transform: translate(-65%, -53%);
+  }
+
+  .home-page h1 {
+    /* Raghavendar */
+    color: #f8bf3c;
+    text-align: center;
+    font-size: 5vw;
+    top: 47%;
+    left: 28%;
+    -ms-transform: translate(-28%, -47%);
+    transform: translate(-28%, -47%);
+  }
+
+  #responsive-github {
+    display: block;
+    color: #f8bf3c;
+    position: absolute;
+    top: 47%;
+    right: 10%;
+    -ms-transform: translate(10%, -47%);
+    transform: translate(10%, -47%);
+    font-size: 5vw;
+  }
+  #responsive-linkedin {
+    display: block;
+    color: #433a3a;
+    position: absolute;
+    top: 53%;
+    right: 10%;
+    -ms-transform: translate(10%, -53%);
+    transform: translate(10%, -53%);
+    font-size: 5vw;
+  }
+
+  #social-sidebar {
+    display: none;
+  }
+
   .skills-section {
     min-height: 90vh;
   }
@@ -478,5 +539,31 @@ hr {
   #project-container .project-sidebar p {
     font-size: 3.2vw;
     margin-bottom: 55vw;
+  }
+  .home-page h2 {
+    /* RAVI */
+    position: absolute;
+    color: #433a3a;
+    font-size: 6vw;
+    top: 53%;
+    left: 65%;
+    -ms-transform: translate(-65%, -53%);
+    transform: translate(-65%, -53%);
+  }
+
+  .home-page h1 {
+    /* Raghavendar */
+    position: absolute;
+    color: #f8bf3c;
+    text-align: center;
+    font-size: 6vw;
+    top: 47%;
+    left: 28%;
+    -ms-transform: translate(-28%, -47%);
+    transform: translate(-28%, -47%);
+  }
+  #responsive-github,
+  #responsive-linkedin {
+    font-size: 7vw;
   }
 }
