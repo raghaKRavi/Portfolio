@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./HomeStyle.css";
-
-import Contact from "../contact/Contact";
+// import Contact from "../contact/Contact";
 import ContactSection from "../contact/ContactSection";
 import About from "../about/About";
 
@@ -20,9 +19,13 @@ import ProjectSlider from "../projectslider/ProjectSlider";
 import SkillSection from "../skills/SkillSection";
 import Footer from "../footer/Footer";
 
+import TypeWriter from "../typewrite/Typewrite";
+
 const Home = () => {
   const [scrolling, setScrolling] = useState(false);
   const [showBurger, setShowBurger] = useState(false);
+
+  const msgs = ["DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
   useEffect(() => {
     window.onscroll = () => {
@@ -37,8 +40,6 @@ const Home = () => {
   const burgerHandler = () => {
     setShowBurger((value) => !value);
   };
-
-  const msgs = ["SOFTWARE DEVELOPER", "FREELANCER", "A CODING GEEK!!"];
 
   return (
     <div className="home-body">
@@ -90,9 +91,12 @@ const Home = () => {
 
       <section className="home-page">
         <h1>RAGHAVENDAR</h1>
-        <h2>
-          <span>RAVI</span>
-        </h2>
+        <h2>RAVI</h2>
+
+        <span>
+          <TypeWriter messages={msgs} />
+        </span>
+
         <a href="https://github.com/Ragav25" id="responsive-github">
           <FontAwesomeIcon icon={faGithubSquare} />
         </a>
