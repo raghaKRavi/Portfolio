@@ -313,6 +313,19 @@ button {
   transform: translate(-30%, -40%);
 }
 
+.home-page span {
+  display: block;
+  position: absolute;
+  color: #433a3a;
+  /* background-color: red; */
+  width: 18vw;
+  font-size: 1.3vw;
+  top: 52%;
+  left: 70%;
+  -ms-transform: translate(-70%, -52%);
+  transform: translate(-70%, -52%);
+}
+
 #responsive-github,
 #responsive-linkedin {
   display: none;
@@ -485,6 +498,10 @@ hr {
     left: 28%;
     -ms-transform: translate(-28%, -47%);
     transform: translate(-28%, -47%);
+  }
+
+  .home-page span {
+    display: none;
   }
 
   #responsive-github {

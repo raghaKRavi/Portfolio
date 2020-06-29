@@ -1,34 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./TypewriteStyle.css";
 
-// const mechanism = {
-//     deleting_speed: 30,
-//     typing_speed: 150,
-// }
-
-// const Typewrite = ({ message, heading }) => {
-//   const[state, setState] = useState({
-//       text:"",
-//       message:"",
-//       isDeleting: false,
-//       loopNum:0,
-//       typingSpeed: mechanism.typing_speed,
-//   });
-
-//   useEffect(() => {
-//       let timer="";
-//       const handleType = () => {
-//           setState( cs => ({
-//             ...cs,
-//             text: getCurrentText(cs),
-//             typingSpeed: getTypingSpeed(cs)
-//           }));
-
-//       }
-//   })
-
-// };
-
 const CONSTANTS = {
   DELETING_SPEED: 30,
   TYPING_SPEED: 180,
