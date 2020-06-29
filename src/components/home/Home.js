@@ -232,7 +232,8 @@ const Home = () => {
               "Bee-hive is an application where users can add, delete, and update their projects and tasks for each project individually. The Added Data will be stored to local Storage and can view it unless the page is hard refreshed or the data is deleted."
             }
             projectGithubLink={"https://github.com/Ragav25/To-Do_Application"}
-            demoCursor={"not-allowed"}
+            projectDemoLink={"https://beehiveproductive.netlify.app/"}
+            // demoCursor={"not-allowed"}
           />
         </div>
       </section>
