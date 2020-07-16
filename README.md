@@ -1,2 +1,4 @@
 # Portfolio
-Creating Portfolio with the help of React
+It is a Personal Portfolio. 
+Created using ReactJs, HTML and CSS.
+
