@@ -5,7 +5,7 @@ import about from "../../img/about-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
-import cv from "../../pdf/RaghavendarRavi-CV.pdf";
+import cv from "../../pdf/RaghavendarRavi-Resume.pdf";
 
 const About = () => {
   return (
